@@ -7,16 +7,43 @@
 //
 
 import UIKit
+import pop
 
 class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     var imageView:UIImageView! = UIImageView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+    var imageURL:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        self.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
         
+        self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
+        
+        // Initialise an activity indicator
+        initialiseViewWithActivityIndicator()
+        
+        // Initialise the image view
+        initialiseViewWithImageView(self.imageURL)
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        initialiseImageView()
+    }
+    
+    func initialiseViewWithActivityIndicator() {
+        let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        
+        activityIndicator.center = self.view.center
+        
+        activityIndicator.startAnimating()
+        
+        self.view.addSubview(activityIndicator)
+    }
+    
+    func initialiseViewWithImageView(imageURL:String) {
         self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -36,6 +63,18 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         // Add layout constraints to the view
         self.view.addConstraints([imageViewTopConstraint, imageViewRightConstraint, imageViewBottomConstraint, imageViewLeftConstraint])
+    }
+    
+    func initialiseImageView() {
+        var image:UIImage
+        
+        if self.imageURL.hasSuffix(".gif") {
+            image = UIImage.gifWithURL(self.imageURL)!
+            self.imageView.image = image
+        } else {
+            let imageURL = NSURL(string: self.imageURL)
+            self.imageView.hnk_setImageFromURL(imageURL!)
+        }
     }
     
     func dismissModal() {

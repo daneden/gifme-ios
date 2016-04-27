@@ -72,16 +72,20 @@ class GifmeViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let imageName = self.imageArray[indexPath.row]
         let viewController = GifmeImageViewController()
-        var image:UIImage
+//        var image:UIImage
+//        
+//        if imageName.hasSuffix(".gif") {
+//            image = UIImage.gifWithURL("https://degif.imgix.net/\(imageName)")!
+//            viewController.imageView.image = image
+//        } else {
+//            let imageURL = NSURL(string: "https://degif.imgix.net/\(imageName)")
+//            viewController.imageView.hnk_setImageFromURL(imageURL!)
+//        }
         
-        if imageName.hasSuffix(".gif") {
-            image = UIImage.gifWithURL("https://degif.imgix.net/\(imageName)")!
-            viewController.imageView.image = image
-        } else {
-            let imageURL = NSURL(string: "https://degif.imgix.net/\(imageName)")
-            viewController.imageView.hnk_setImageFromURL(imageURL!)
-        }
+        viewController.imageURL = "https://degif.imgix.net/\(imageName)"
         
+        viewController.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
+        viewController.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
         self.presentViewController(viewController, animated: true, completion: nil)
     }
 

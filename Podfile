@@ -1,4 +1,7 @@
 use_frameworks!
 
-pod 'HanekeSwift'
-pod 'SwiftGifOrigin'
+target "Gifme" do
+  pod 'HanekeSwift'
+  pod 'SwiftGifOrigin'
+  pod 'pop'
+end

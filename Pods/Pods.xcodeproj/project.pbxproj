@@ -1,1971 +1,1116 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>046204114A90811739F5EDC3D6D227AC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>UIView+Haneke.swift</string>
-			<key>path</key>
-			<string>Haneke/UIView+Haneke.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>08819276D8DC5E430119F678F8CDBB2B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>894E5DA93A9F359521A89826BE6DA777</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>09348A4E711E0B35317DC579C0ACD070</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0BFDE8332EDC136EB44F2932F239F6A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7509586E926B3ACB236691C953946949</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0D17A4436138A9C9BF411303B0759829</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C4546D6D1F0D4C3F0ADF6FBA551BD4A7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0D58CEC6BC851FA89D18EE5750E1069B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0E01E74BF92665F0DAF158E3A9B98129</key>
-		<dict>
-			<key>fileRef</key>
-			<string>83DED5FF8C05C95A72F65D17DF7ED3AB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>129B9536BC502EA7C6161485312BE61B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>88BAFE9FF9F19813E4003DDA5499DE9E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/HanekeSwift/HanekeSwift-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/HanekeSwift/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/HanekeSwift/HanekeSwift.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>Haneke</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>16718F23517D6760329ED506585A449B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1AC1D649713B54A7C56C930E0CF4E803</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9DF87BB974D490D10E9598733C67CFE8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1AD7DD6D93D61146F78F705F5E468C59</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C654DDE05EA2301C3B799E0CD3AB107D</string>
-				<string>FF8B95ABE232F644E0507694A08754AC</string>
-				<string>C019BE9EDC5D2AAF5FF20BB7430851A0</string>
-				<string>725DED82F5C3D06BAC9EAAC65A81C63A</string>
-				<string>358CF22C8C57C6BBF3A920CAC21DB739</string>
-				<string>7DF55EC5683FC71D98355F87637D232D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/SwiftGifOrigin</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1C32E403CB75EC53CC1930851CF84C8A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8DFCAAA47A8036217D18DA941A9B2820</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1E5FE3C129D3DF4DEE1E46430FA63484</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>6ED5E040D9BCBD6E3AA5AE2B86037694</string>
-			<key>buildPhases</key>
-			<array>
-				<string>DC58EB18E0833F42F16C59A69053573A</string>
-				<string>C17A2D7BEC58D3E0D8B837B0FF87CFC4</string>
-				<string>8B896B3B04512603B651D5CDB4A95909</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>DE5419D3494E8E69BC470977C19B7EDE</string>
-				<string>8078FA2ECB14BA183A58419230D08DDF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>productName</key>
-			<string>Pods</string>
-			<key>productReference</key>
-			<string>47EE82F25F89963B69EC36485E0DFF71</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>206F03E05EF5256A339B6D503D59FA44</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F1617C553638EBD86F64E16166E39730</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2167433F2EE38BF01220E327ED8FAE40</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BFE0A08722DDD396E2D71D14AD9ED80E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2533863DA4C2E3A89D3E1898FE3A68C7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Fetch.swift</string>
-			<key>path</key>
-			<string>Haneke/Fetch.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>270520E8E72E32AC313AE621D8A080C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2533863DA4C2E3A89D3E1898FE3A68C7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2B389FAB51F6EEA43F72CA7BDC8E8E28</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>2BCC458FDD5F692BBB2BFC64BB5701FC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>2B389FAB51F6EEA43F72CA7BDC8E8E28</string>
-				<string>5A0C6FE968931D888F00C9EC18DDF5BC</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>31E488CFE2EB86809B81BC39E2DEF646</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6DDC18A7475BD89DC9B0877D09936328</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3406C8DBD2BE580A164C9A38A7C0F0DA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>E4B05751EB5616595DC0B75C0A087028</string>
-				<string>59C83C15EFA8CCD549F3ECD805F28DD6</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>358CF22C8C57C6BBF3A920CAC21DB739</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SwiftGifOrigin-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>36CCFC1210D22B5E337AB14165617A76</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>66C130DD36F9DD035D0659DD37DD5041</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>39812BA0E5F953EAE0B9081BA0EC3D6E</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>889C6ED45C1700DEE4A62E789EB8F969</string>
-			<key>remoteInfo</key>
-			<string>SwiftGifOrigin</string>
-		</dict>
-		<key>3E4E89230EF59BC255123B67864ACF77</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>4252B3A2BF3090067793683F9F0F6F9E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>HanekeSwift-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4459FB66C5E934703E2DF3E8444417C7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>HanekeSwift.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>47EE82F25F89963B69EC36485E0DFF71</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods.framework</string>
-			<key>path</key>
-			<string>Pods.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>47F8AC6206575743B3E24EC54446A267</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B192D36516CE4B723E3A6A610C9DDE5B</string>
-				<string>7F745A9CBD4DB567238472790A571A73</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>488605BD51C85EEA920BE3C7F624842F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A1C1449D88CC168E33286934E7E84472</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C191AD1E01C5A4EA8EF25E709E8216F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>977577C045EDA9D9D1F46E2598D19FC7</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods/Pods.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5174DC465A5C35F9B145CB5DDF840172</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Haneke.swift</string>
-			<key>path</key>
-			<string>Haneke/Haneke.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>526726400C7D6582C5DA6A6BFAF689F0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>046204114A90811739F5EDC3D6D227AC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>59120F346F4C2F8ADA8BED6A172B94E4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9B73D8DC5F04B6A31F7D4C1FF775CC57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>59C83C15EFA8CCD549F3ECD805F28DD6</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C019BE9EDC5D2AAF5FF20BB7430851A0</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/SwiftGifOrigin/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>SwiftGifOrigin</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5A0C6FE968931D888F00C9EC18DDF5BC</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5B83C2AD137CF6C7F4C5DBE1397C3390</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>FF7B6066A8A9E23A7AF9B06122B0F467</string>
-				<string>129B9536BC502EA7C6161485312BE61B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5FBC3F21FC0E08791C674F6A9F3A0D76</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>7DDF79495F24B309AF089ACC99FC1151</string>
-			<key>remoteInfo</key>
-			<string>HanekeSwift</string>
-		</dict>
-		<key>60E1CAC79FA8CFE82F1DA78C613CCBE8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>725DED82F5C3D06BAC9EAAC65A81C63A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>66C130DD36F9DD035D0659DD37DD5041</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7DF55EC5683FC71D98355F87637D232D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>6DDC18A7475BD89DC9B0877D09936328</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>DiskCache.swift</string>
-			<key>path</key>
-			<string>Haneke/DiskCache.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6ED5E040D9BCBD6E3AA5AE2B86037694</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>4C191AD1E01C5A4EA8EF25E709E8216F</string>
-				<string>A68960E155E181045D157845CB21C9CC</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>724BC3788916683A6B23CD97F88D0616</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Haneke.framework</string>
-			<key>path</key>
-			<string>Haneke.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>725DED82F5C3D06BAC9EAAC65A81C63A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SwiftGifOrigin-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>73517D3F0FF9D26DA61FB9CBBCC1202B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2BCC458FDD5F692BBB2BFC64BB5701FC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>7509586E926B3ACB236691C953946949</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>NSHTTPURLResponse+Haneke.swift</string>
-			<key>path</key>
-			<string>Haneke/NSHTTPURLResponse+Haneke.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>75D98FF52E597A11900E131B6C4E1ADA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E8446514FBAD26C0E18F24A5715AEF67</string>
-				<string>79A9DEDC89FE8336BF5FEDAAF75BF7FC</string>
-				<string>D0405803033A2A777B8E4DFA0C1800ED</string>
-				<string>87B213035BAC5F75386F62D3C75D2342</string>
-				<string>894E5DA93A9F359521A89826BE6DA777</string>
-				<string>E7F21354943D9F42A70697D5A5EF72E9</string>
-				<string>CBC0F7C552B739C909B650A0F42F7F38</string>
-				<string>2BCC458FDD5F692BBB2BFC64BB5701FC</string>
-				<string>977577C045EDA9D9D1F46E2598D19FC7</string>
-				<string>DA312349A49333542E6F4B36B329960E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>path</key>
-			<string>Target Support Files/Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>784D05567CB5C6AA3BD4088AB7BCD3C9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>UIImage+Gif.swift</string>
-			<key>path</key>
-			<string>SwiftGifCommon/UIImage+Gif.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7937C0AE8F8BBBA49DBC27C1F04ADC00</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>UIImage+Haneke.swift</string>
-			<key>path</key>
-			<string>Haneke/UIImage+Haneke.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>79A9DEDC89FE8336BF5FEDAAF75BF7FC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
-				<string>47F8AC6206575743B3E24EC54446A267</string>
-				<string>E53BA3B2BC4BCDDB3CD6D4B97BDE0521</string>
-				<string>B7B80995527643776607AFFA75B91E24</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DDF79495F24B309AF089ACC99FC1151</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5B83C2AD137CF6C7F4C5DBE1397C3390</string>
-			<key>buildPhases</key>
-			<array>
-				<string>AD75B1F809159184F48646B8441799A0</string>
-				<string>DC6F3167BAEEC168056F22481901B03E</string>
-				<string>206F03E05EF5256A339B6D503D59FA44</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>HanekeSwift</string>
-			<key>productName</key>
-			<string>HanekeSwift</string>
-			<key>productReference</key>
-			<string>724BC3788916683A6B23CD97F88D0616</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>7DF55EC5683FC71D98355F87637D232D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SwiftGifOrigin-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7F745A9CBD4DB567238472790A571A73</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>784D05567CB5C6AA3BD4088AB7BCD3C9</string>
-				<string>1AD7DD6D93D61146F78F705F5E468C59</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SwiftGifOrigin</string>
-			<key>path</key>
-			<string>SwiftGifOrigin</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>80537DC1037798BC187946C450CCA9BE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5174DC465A5C35F9B145CB5DDF840172</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8078FA2ECB14BA183A58419230D08DDF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>SwiftGifOrigin</string>
-			<key>target</key>
-			<string>889C6ED45C1700DEE4A62E789EB8F969</string>
-			<key>targetProxy</key>
-			<string>39812BA0E5F953EAE0B9081BA0EC3D6E</string>
-		</dict>
-		<key>82BA10FF5058A2B2CA8F195D2A4D99AA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>CryptoSwiftMD5.swift</string>
-			<key>path</key>
-			<string>Haneke/CryptoSwiftMD5.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>83DED5FF8C05C95A72F65D17DF7ED3AB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Format.swift</string>
-			<key>path</key>
-			<string>Haneke/Format.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>86D0FB5F18A11DA2778DE3C824FAF558</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>NetworkFetcher.swift</string>
-			<key>path</key>
-			<string>Haneke/NetworkFetcher.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>86FD0D6AE3A29701F37EA2288CE2BE39</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>60E1CAC79FA8CFE82F1DA78C613CCBE8</string>
-				<string>AD20D8C73B82C4ED72C0AF0360782FFF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>87B213035BAC5F75386F62D3C75D2342</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>889C6ED45C1700DEE4A62E789EB8F969</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>3406C8DBD2BE580A164C9A38A7C0F0DA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>86FD0D6AE3A29701F37EA2288CE2BE39</string>
-				<string>1AC1D649713B54A7C56C930E0CF4E803</string>
-				<string>36CCFC1210D22B5E337AB14165617A76</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SwiftGifOrigin</string>
-			<key>productName</key>
-			<string>SwiftGifOrigin</string>
-			<key>productReference</key>
-			<string>961E1AEE6E6CDEE56578D77C51D8FECB</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>88BAFE9FF9F19813E4003DDA5499DE9E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>HanekeSwift.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>894E5DA93A9F359521A89826BE6DA777</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8B896B3B04512603B651D5CDB4A95909</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>73517D3F0FF9D26DA61FB9CBBCC1202B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8B9737152C5A4E93305D8802B9B1D61F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Cache.swift</string>
-			<key>path</key>
-			<string>Haneke/Cache.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8BFADF0B5074404EB86A5BBAEF3D8D86</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8B9737152C5A4E93305D8802B9B1D61F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8DA491993BD3028441E8072346558D0F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>NSFileManager+Haneke.swift</string>
-			<key>path</key>
-			<string>Haneke/NSFileManager+Haneke.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8DFCAAA47A8036217D18DA941A9B2820</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>CGSize+Swift.swift</string>
-			<key>path</key>
-			<string>Haneke/CGSize+Swift.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8F7FD3840C7D2F0064F392298952DF2A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>String+Haneke.swift</string>
-			<key>path</key>
-			<string>Haneke/String+Haneke.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>941B271BAE995C0E2591538599489B7E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7937C0AE8F8BBBA49DBC27C1F04ADC00</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>961E1AEE6E6CDEE56578D77C51D8FECB</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>SwiftGifOrigin.framework</string>
-			<key>path</key>
-			<string>SwiftGifOrigin.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>977577C045EDA9D9D1F46E2598D19FC7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9B73D8DC5F04B6A31F7D4C1FF775CC57</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Fetcher.swift</string>
-			<key>path</key>
-			<string>Haneke/Fetcher.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9DF87BB974D490D10E9598733C67CFE8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A1C1449D88CC168E33286934E7E84472</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>UIImageView+Haneke.swift</string>
-			<key>path</key>
-			<string>Haneke/UIImageView+Haneke.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A68960E155E181045D157845CB21C9CC</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>DA312349A49333542E6F4B36B329960E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods/Pods.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>AAC54A62AFD6D624719D215F75D2FA20</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>UIButton+Haneke.swift</string>
-			<key>path</key>
-			<string>Haneke/UIButton+Haneke.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AD20D8C73B82C4ED72C0AF0360782FFF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>784D05567CB5C6AA3BD4088AB7BCD3C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AD75B1F809159184F48646B8441799A0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8BFADF0B5074404EB86A5BBAEF3D8D86</string>
-				<string>1C32E403CB75EC53CC1930851CF84C8A</string>
-				<string>F16A2712075F599788B658E9B34EAEEA</string>
-				<string>2167433F2EE38BF01220E327ED8FAE40</string>
-				<string>31E488CFE2EB86809B81BC39E2DEF646</string>
-				<string>0D17A4436138A9C9BF411303B0759829</string>
-				<string>270520E8E72E32AC313AE621D8A080C3</string>
-				<string>59120F346F4C2F8ADA8BED6A172B94E4</string>
-				<string>0E01E74BF92665F0DAF158E3A9B98129</string>
-				<string>80537DC1037798BC187946C450CCA9BE</string>
-				<string>DA0E79C7A898F4F5D8D62B1ADCF67241</string>
-				<string>D172803AB7C600E0004EED188448B772</string>
-				<string>EBC23CCE8551B2DDF458DCE761A592B3</string>
-				<string>B5D0F9080C2735E422221399AA6892F2</string>
-				<string>0BFDE8332EDC136EB44F2932F239F6A9</string>
-				<string>FE67C22A54CDF4D547B37B544EB3C596</string>
-				<string>C37FCA491E7E9D3CEFDC71E6514AD176</string>
-				<string>E5F59EE78A9F139EA2502EEA67B17F85</string>
-				<string>941B271BAE995C0E2591538599489B7E</string>
-				<string>488605BD51C85EEA920BE3C7F624842F</string>
-				<string>526726400C7D6582C5DA6A6BFAF689F0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B192D36516CE4B723E3A6A610C9DDE5B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8B9737152C5A4E93305D8802B9B1D61F</string>
-				<string>8DFCAAA47A8036217D18DA941A9B2820</string>
-				<string>82BA10FF5058A2B2CA8F195D2A4D99AA</string>
-				<string>BFE0A08722DDD396E2D71D14AD9ED80E</string>
-				<string>6DDC18A7475BD89DC9B0877D09936328</string>
-				<string>C4546D6D1F0D4C3F0ADF6FBA551BD4A7</string>
-				<string>2533863DA4C2E3A89D3E1898FE3A68C7</string>
-				<string>9B73D8DC5F04B6A31F7D4C1FF775CC57</string>
-				<string>83DED5FF8C05C95A72F65D17DF7ED3AB</string>
-				<string>5174DC465A5C35F9B145CB5DDF840172</string>
-				<string>C3BEBBD2F4F82D95D60D8F7F6BA3225A</string>
-				<string>86D0FB5F18A11DA2778DE3C824FAF558</string>
-				<string>8DA491993BD3028441E8072346558D0F</string>
-				<string>7509586E926B3ACB236691C953946949</string>
-				<string>C3781A2482A6537F9F15D6C210190013</string>
-				<string>8F7FD3840C7D2F0064F392298952DF2A</string>
-				<string>AAC54A62AFD6D624719D215F75D2FA20</string>
-				<string>7937C0AE8F8BBBA49DBC27C1F04ADC00</string>
-				<string>A1C1449D88CC168E33286934E7E84472</string>
-				<string>046204114A90811739F5EDC3D6D227AC</string>
-				<string>C22BC6A92B7F430F786D6F7F45B3FD47</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>HanekeSwift</string>
-			<key>path</key>
-			<string>HanekeSwift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B2A712F026FEAB2EDDDA4577AA33BAAE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>HanekeSwift-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5D0F9080C2735E422221399AA6892F2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8DA491993BD3028441E8072346558D0F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B7B80995527643776607AFFA75B91E24</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>75D98FF52E597A11900E131B6C4E1ADA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BF6342C8B29F4CEEA088EFF7AB4DE362</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF6342C8B29F4CEEA088EFF7AB4DE362</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3E4E89230EF59BC255123B67864ACF77</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BFE0A08722DDD396E2D71D14AD9ED80E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Data.swift</string>
-			<key>path</key>
-			<string>Haneke/Data.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C019BE9EDC5D2AAF5FF20BB7430851A0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>SwiftGifOrigin.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C17A2D7BEC58D3E0D8B837B0FF87CFC4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>09348A4E711E0B35317DC579C0ACD070</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C22BC6A92B7F430F786D6F7F45B3FD47</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4459FB66C5E934703E2DF3E8444417C7</string>
-				<string>88BAFE9FF9F19813E4003DDA5499DE9E</string>
-				<string>4252B3A2BF3090067793683F9F0F6F9E</string>
-				<string>B2A712F026FEAB2EDDDA4577AA33BAAE</string>
-				<string>C25D340244D1C378A5CB790AA4191402</string>
-				<string>16718F23517D6760329ED506585A449B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/HanekeSwift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C25D340244D1C378A5CB790AA4191402</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>HanekeSwift-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C3781A2482A6537F9F15D6C210190013</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>NSURLResponse+Haneke.swift</string>
-			<key>path</key>
-			<string>Haneke/NSURLResponse+Haneke.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C37FCA491E7E9D3CEFDC71E6514AD176</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8F7FD3840C7D2F0064F392298952DF2A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C3BEBBD2F4F82D95D60D8F7F6BA3225A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>Log.swift</string>
-			<key>path</key>
-			<string>Haneke/Log.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C4546D6D1F0D4C3F0ADF6FBA551BD4A7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>DiskFetcher.swift</string>
-			<key>path</key>
-			<string>Haneke/DiskFetcher.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C654DDE05EA2301C3B799E0CD3AB107D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CBC0F7C552B739C909B650A0F42F7F38</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D0405803033A2A777B8E4DFA0C1800ED</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D172803AB7C600E0004EED188448B772</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C3BEBBD2F4F82D95D60D8F7F6BA3225A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0700</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>E53BA3B2BC4BCDDB3CD6D4B97BDE0521</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>7DDF79495F24B309AF089ACC99FC1151</string>
-				<string>1E5FE3C129D3DF4DEE1E46430FA63484</string>
-				<string>889C6ED45C1700DEE4A62E789EB8F969</string>
-			</array>
-		</dict>
-		<key>DA0E79C7A898F4F5D8D62B1ADCF67241</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4252B3A2BF3090067793683F9F0F6F9E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DA312349A49333542E6F4B36B329960E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DC58EB18E0833F42F16C59A69053573A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>08819276D8DC5E430119F678F8CDBB2B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DC6F3167BAEEC168056F22481901B03E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0D58CEC6BC851FA89D18EE5750E1069B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DE5419D3494E8E69BC470977C19B7EDE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>HanekeSwift</string>
-			<key>target</key>
-			<string>7DDF79495F24B309AF089ACC99FC1151</string>
-			<key>targetProxy</key>
-			<string>5FBC3F21FC0E08791C674F6A9F3A0D76</string>
-		</dict>
-		<key>E4B05751EB5616595DC0B75C0A087028</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C019BE9EDC5D2AAF5FF20BB7430851A0</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/SwiftGifOrigin/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>SwiftGifOrigin</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E53BA3B2BC4BCDDB3CD6D4B97BDE0521</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>724BC3788916683A6B23CD97F88D0616</string>
-				<string>47EE82F25F89963B69EC36485E0DFF71</string>
-				<string>961E1AEE6E6CDEE56578D77C51D8FECB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5F59EE78A9F139EA2502EEA67B17F85</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AAC54A62AFD6D624719D215F75D2FA20</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E7F21354943D9F42A70697D5A5EF72E9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E8446514FBAD26C0E18F24A5715AEF67</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EBC23CCE8551B2DDF458DCE761A592B3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>86D0FB5F18A11DA2778DE3C824FAF558</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1617C553638EBD86F64E16166E39730</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C25D340244D1C378A5CB790AA4191402</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>F16A2712075F599788B658E9B34EAEEA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>82BA10FF5058A2B2CA8F195D2A4D99AA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FE67C22A54CDF4D547B37B544EB3C596</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C3781A2482A6537F9F15D6C210190013</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FF7B6066A8A9E23A7AF9B06122B0F467</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>88BAFE9FF9F19813E4003DDA5499DE9E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/HanekeSwift/HanekeSwift-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/HanekeSwift/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/HanekeSwift/HanekeSwift.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>Haneke</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>FF8B95ABE232F644E0507694A08754AC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>SwiftGifOrigin.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02159528F48E844768002D0EDA08156C /* POPGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = B6BBC33E453752152A78B7AB678C452A /* POPGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0356768025B5D1B25F512F4D4F763E64 /* POPCGUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 69FA63844D454CD5CD52978C5719B040 /* POPCGUtils.mm */; };
+		0D361BC02EA3B8C476545E29A293CCB8 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2465137621C3BFFCCCCF108A119F32D7 /* Format.swift */; };
+		0E703A455818E8DE327E1B7FE25985E9 /* POPAnimatableProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 322890A91BD3C2C9D777269CDE5B1DB2 /* POPAnimatableProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12B84C5CD0F7E15596DD41046E90B92F /* POPVector.h in Headers */ = {isa = PBXBuildFile; fileRef = ACA2D7EEBC1BFD2235E1DE4FDA1DC0CC /* POPVector.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		187D61002BD10D8B309D460FF89E6B09 /* POPAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = E9690B823455A9AB01CE753A4102161A /* POPAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1D27B06296C346D4F23F5ED14B0A5D1A /* UIButton+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D75EDA5CF61560D17FDB40FA86F464 /* UIButton+Haneke.swift */; };
+		1EACCDA69F0C1F2298AB2B1543C4F24A /* POPLayerExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F398412A746FA3BB652FC6DD5E7ED7 /* POPLayerExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2232F3D40FD21477C9AFBC3B1450312E /* POPAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = F698FBE77868244AE057AEE04D7BAFFB /* POPAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		237C898F95B771110A237FEECAAA56EC /* POPPropertyAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 31AE8E586300A4AF51BD46FC572EF7CC /* POPPropertyAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24E7FCE3DF42DC6D616DC39F8AC69566 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB1CDEFE773CA8A16386DD45C35D12 /* UIImageView+Haneke.swift */; };
+		297BA46D645AAD8E9E866CC81294002F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		2AAB2C2B998FD11EA540298FA18100FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		2DB8CFBCDD285639D2EC001948D29E3D /* SwiftGifOrigin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65EAC6C3E58BC9B957B9DCE6BC9E808A /* SwiftGifOrigin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30FEC7AA5E3B076B215824D859932FBF /* Pods-Gifme-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0314D81471413DA8D81EBE937A2CD6DC /* Pods-Gifme-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31E6F933A061182DCC597C7E9E987F3E /* POPVector.mm in Sources */ = {isa = PBXBuildFile; fileRef = EAF24EDCB884A509D0A2A0937C07FBBD /* POPVector.mm */; };
+		3231C71274F2894799777A4A4C5767C8 /* POPAnimationTracer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 847634DE166A5E0B2E4E2E21B04C9AA8 /* POPAnimationTracer.mm */; };
+		345C18ED23357FB4F0EBD71E754DCAB2 /* POPAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9ECF7DCB92BD82459331AE01BEB618C4 /* POPAnimation.mm */; };
+		3896A163D2F7896F7727F904D1AA4E4E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F81CD1F25C6F5A9EA8E2AA8781D426D /* UIImage+Gif.swift */; };
+		3D90F67A3A10F71FD01DEDA59496C1D7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5C8432F89EF4E64676BA8E99D0391 /* Data.swift */; };
+		3DEF55E320F3CE6A4C1B367A70992A52 /* POPAnimationPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 02446385BB1A605FB3A721E32922AB36 /* POPAnimationPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3EA2C091B8672D75066EEEEFE63B5A86 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CD0491680E4F4CDEFF0A9530B39132 /* NetworkFetcher.swift */; };
+		432BE89FD99771522DBC09E5ABC8D5B5 /* POPDecayAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19BEF6CAD20ABDD183718AB1CD6E8924 /* POPDecayAnimation.mm */; };
+		463CCD202C890A1092831CE8B3542AD9 /* POPAction.h in Headers */ = {isa = PBXBuildFile; fileRef = FDDE65D330E29F7638C6F5CDC432A0BD /* POPAction.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		490631874B94C14CDBDF152F4AA3A399 /* POPAnimationRuntime.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00797C414B03B838E27DAE56D5C1BB0A /* POPAnimationRuntime.mm */; };
+		49A5E2B820A83801CEE267AA6E1D923F /* DiskFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F954BDC8C583F7836D8D5F6A9276E68 /* DiskFetcher.swift */; };
+		4AAB1304E6083F6AE9EEE9D3E3445B44 /* POPBasicAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 614750F5486494F0D83E7D0FD794F7F9 /* POPBasicAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C67E8535CC156387D18D068C60DA40B /* POPAnimationExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = A58AAFA326CF22C810B401AC8C7B1E11 /* POPAnimationExtras.mm */; };
+		55F3BC1465BB2EB6F02ADC5A2D1F9F83 /* String+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B3EB1C89320933E4B78FB4224A5E0C /* String+Haneke.swift */; };
+		5877605360B212CC6A401624156FFEDA /* POPCustomAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2B6D4B65A72AFC7D4BB3D46EA0302917 /* POPCustomAnimation.mm */; };
+		5B772CFE057A5DC07564990F0F36AA1C /* POPSpringAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5E5A27AF764F16EB71EB27317168E02D /* POPSpringAnimation.mm */; };
+		5D5EC309457EDD89A54FD274484563FF /* TransformationMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F4C3DB096656AC8F6EE64598EC0FB5B /* TransformationMatrix.cpp */; };
+		5FB5682CA2EE7DF9BCC6DBE1788739D0 /* pop-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40D566AFF2FE5C62720F72BB6C1BF27E /* pop-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		616F166A8D559675FCA695A41569FE31 /* UnitBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B0464388E742AC09CA94B8F3BBFD8AB /* UnitBezier.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		67F42CF591130C24B95ACAD9C2414B66 /* POPCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EEFC66EAD9E0ACB0AA7C1A4B85A81FA /* POPCustomAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AE28FF9A753BE00CC2349ECFBE9EEFB /* POPDecayAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CABC284D823B97ABCB3873399ACA05C /* POPDecayAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E7EA00ABF8932E2902433186E254022 /* POPAnimationEvent.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD8571DE4A3F8DB3C20EC22881DD1491 /* POPAnimationEvent.mm */; };
+		710535943DD9A5EF7F40FD41923290BF /* POPAnimationEventInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E19BD54AD9B58965D224D2A724E431 /* POPAnimationEventInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		73E38336847F38EDD3D2F1BB844D2E6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		76A8D8E88BDAFE4C975A1E2A32353E10 /* POPLayerExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3896B46C8A13C95A30F55E199EEC3C94 /* POPLayerExtras.mm */; };
+		76ED75DA5C72A63A21A33957A28F0ABB /* POPBasicAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 58D82C5A6503F5A1EF6E2EA48595A765 /* POPBasicAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8514DC0C650732FB1302E1A99FCA2095 /* POPAnimationRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 050E751D6CBC35794FDB17305C5C3094 /* POPAnimationRuntime.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8826FAB138D7D120A81884142F1218C8 /* POPSpringAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BA14555E6642C126A51137F55669ED0 /* POPSpringAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8A85C4CDF0FE775E0BD0C44B0C3E6159 /* NSURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB0B8E89BB9037D385B6111546D54BC /* NSURLResponse+Haneke.swift */; };
+		8C357B44EA2BC147AA0219CD8CC03B5F /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995F31C8CA7BABD9FB2CB1DA9E3967D3 /* Fetcher.swift */; };
+		92A2D4839D45ABA48D77923C035C8943 /* NSFileManager+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = D726F763B41A9BACDA99FC3529BA6395 /* NSFileManager+Haneke.swift */; };
+		9516E33CEE846024D774317E1B81E926 /* TransformationMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1308A7F60A3A69EE915607808D2A91 /* TransformationMatrix.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9831DDC5256EF014D93FF2DBE055E7B6 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364DFB5F64F03CB72E4CD9FCEBAF93B5 /* Cache.swift */; };
+		9911E1A886CD44872C07FAA6A1521A85 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450DACCE48BA9A8475F5F30D6DEC1DC8 /* Log.swift */; };
+		9A69CD802B48E811313ED1C04E3CF29F /* POPAnimator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72DED23832B12D6F4D930B5CA64C6C86 /* POPAnimator.mm */; };
+		9B50E86FE6956AD88D5FD86BE15F8A68 /* SwiftGifOrigin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D3C2ECEFD1CCFC9F710FBA35E731D /* SwiftGifOrigin-dummy.m */; };
+		9D5F6868132325D38051C5A07F128C5C /* UIView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1A867A9B2D4BBE3B115C44317D0918 /* UIView+Haneke.swift */; };
+		9E629066D218DC1DC616E339DB68E49C /* CryptoSwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DDA14B149A36DC576BDB78327F92A8 /* CryptoSwiftMD5.swift */; };
+		9F4D113C6A4469F0DFAC637F1CA2C087 /* CGSize+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8039C97291BD30713486B72F5CE18FF0 /* CGSize+Swift.swift */; };
+		A12904578E66E5C1139C794117B10F06 /* POPAnimationExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0FF53ED2834248AB9AF9D970F860DB /* POPAnimationExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A25BDFD9D679FA23AAF7B1DE2298AFE5 /* POPGeometry.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FCEEF8C9FAC27186023CA17A84A4728 /* POPGeometry.mm */; };
+		A7C9121ECC418175A16B9B504BBD756F /* POPAnimatableProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = FFF9B9994344F140057965125D81D06F /* POPAnimatableProperty.mm */; };
+		A8CF635DBE430F95FB17D371B918B3FB /* UIImage+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = C008E8FD90BF24480A82728D2F5F96BC /* UIImage+Haneke.swift */; };
+		AB02DD775A289B55B03F87A73525B611 /* HanekeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 768B20D455D9804A24D9C0D05EBE528F /* HanekeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABA0D1D32E5616C0C69C6208706B4EEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
+		AEB48C925DC8D4B812C4ABF9F15C822E /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CE7623E419354357029504F2576BE5 /* DiskCache.swift */; };
+		AF440234AE79F69DDE33681CF6425FB7 /* POPPropertyAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A3907A03606271FADCF417A590293 /* POPPropertyAnimation.mm */; };
+		B1CCF02E757EE856275CE85BF171ED90 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F713B8630DD9CD14F7CB25C340D5F21F /* Fetch.swift */; };
+		B43BAB89F549B5D4E50336A4C1BEFD3E /* POPDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 9974AB3B85FA0EAA2E8CEEE7A0D9302D /* POPDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B70E367BD4A58D66CDCFEB17F6F619DA /* POPCGUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 98AAFC1C109B58C232C5E8902393612B /* POPCGUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B7EAA82A35F46FE610D1B946A4600794 /* POPAnimatorPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AF355A7F5E18CE52B740F7290DDB063 /* POPAnimatorPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BD038EFFD2D1B49B136B42B5E07D59C5 /* Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD87A7848BDEA1AEFF17F61867FBB70 /* Haneke.swift */; };
+		BF8AB427FD90D8B0B6DC5C1CDDF66FE0 /* POPDecayAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D3183C2F8482D632E9262D3560D0D41 /* POPDecayAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C03E309D4B750390A968E8D13DE179EF /* POPSpringSolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 46C46FFC377EB4BDF777D462D5024BAB /* POPSpringSolver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D15794A8521A117E1D15A9A04C2D1BF1 /* POPSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 18A7B20F4756C8B3048325A67E4A5FEF /* POPSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D15C1141FEB21FA4F4C47427ED97C8CA /* POPPropertyAnimationInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 57AB4C0D4EE1B4A6B7D0F76FA6E6E5D3 /* POPPropertyAnimationInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D1A04E413E7CFE6E1E8732642B5297AC /* POPBasicAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4797EA333612C3358F6956F5CF3AB198 /* POPBasicAnimation.mm */; };
+		D1A37EE0E1098C8DF54A8C8425860EB2 /* POPMath.mm in Sources */ = {isa = PBXBuildFile; fileRef = BDABD5A1D50BAE6E1AC0818F293B4099 /* POPMath.mm */; };
+		D1CC0E39C0F2867121F94DB63E29745D /* POPAnimationTracer.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF552515A9268D5A2388968BAAAF3DB /* POPAnimationTracer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF6DBB5FA4E663A5AE7F272CA1CBA3BB /* NSHTTPURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B89B9962DC62FCBFA969954B04FE6 /* NSHTTPURLResponse+Haneke.swift */; };
+		E7E349DA56867F3C6B9B3C2C8A1BC001 /* POPAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A99D74E07F429E67EA0374696EF5F83 /* POPAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA314C274437EDF692DA020A6EF5D62C /* POPAnimationEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = E2514B9310AFDCC0F8B309C908A8CB04 /* POPAnimationEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAFF8570D2DE5B7A107CD4BCE8B3A80F /* FloatConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 9411F33F89905F1054A082C1DD97E52F /* FloatConversion.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EE3EC1DB2FCA9D919D99DA0206C55883 /* POP.h in Headers */ = {isa = PBXBuildFile; fileRef = CCB8BEE2D61DE4B2E0921D664294DB21 /* POP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFDB0C2067FB24EF8F3695D53C70DE18 /* POPMath.h in Headers */ = {isa = PBXBuildFile; fileRef = FACE744A0F9D3CCAFB1E8C1299EA1739 /* POPMath.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F03916F3658FFB4643AD5FC815A4F5A7 /* HanekeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D78F9C8EFF432D61091371D0F058987 /* HanekeSwift-dummy.m */; };
+		F0979D2886345A3D8B260550F77D2658 /* pop-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF307A0BF778A8F9178914B44C638B49 /* pop-dummy.m */; };
+		F6A643CA16C028665BC402B8C27BBEFF /* POPAnimationTracerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 21E34BD137F50F902E23180D6E9FA5DC /* POPAnimationTracerInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F9CA0DFA9CBB306139A0E14D194B4AF0 /* Pods-Gifme-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D5933E5310B7235C4328922FDC41F2 /* Pods-Gifme-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14AEB6C7D8298969D5F36FF5530C67F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BED38AC790380E0BAACBABDB2A2C8CAA;
+			remoteInfo = pop;
+		};
+		91B80FD5351E7FDF13360DE2A157B4EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C2B1953A91633859BF7AD238FF567A0;
+			remoteInfo = HanekeSwift;
+		};
+		A5E1ABB2541E1B3564DB83FC106A1BD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44D0B3627B704910F68542F0FDBEBEF9;
+			remoteInfo = SwiftGifOrigin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		004B05C7C0B525ADDA37404B8D9B3C55 /* Pods-Gifme-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gifme-resources.sh"; sourceTree = "<group>"; };
+		00797C414B03B838E27DAE56D5C1BB0A /* POPAnimationRuntime.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationRuntime.mm; path = pop/POPAnimationRuntime.mm; sourceTree = "<group>"; };
+		02446385BB1A605FB3A721E32922AB36 /* POPAnimationPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationPrivate.h; path = pop/POPAnimationPrivate.h; sourceTree = "<group>"; };
+		0314D81471413DA8D81EBE937A2CD6DC /* Pods-Gifme-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Gifme-umbrella.h"; sourceTree = "<group>"; };
+		050E751D6CBC35794FDB17305C5C3094 /* POPAnimationRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationRuntime.h; path = pop/POPAnimationRuntime.h; sourceTree = "<group>"; };
+		08CD0491680E4F4CDEFF0A9530B39132 /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
+		0AF355A7F5E18CE52B740F7290DDB063 /* POPAnimatorPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimatorPrivate.h; path = pop/POPAnimatorPrivate.h; sourceTree = "<group>"; };
+		0BA14555E6642C126A51137F55669ED0 /* POPSpringAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimationInternal.h; path = pop/POPSpringAnimationInternal.h; sourceTree = "<group>"; };
+		152A58883FB82E9A7CFA6A7551E36F58 /* pop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = pop.xcconfig; sourceTree = "<group>"; };
+		17D5933E5310B7235C4328922FDC41F2 /* Pods-Gifme-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gifme-dummy.m"; sourceTree = "<group>"; };
+		17EB1CDEFE773CA8A16386DD45C35D12 /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
+		18A7B20F4756C8B3048325A67E4A5FEF /* POPSpringAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringAnimation.h; path = pop/POPSpringAnimation.h; sourceTree = "<group>"; };
+		19BEF6CAD20ABDD183718AB1CD6E8924 /* POPDecayAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPDecayAnimation.mm; path = pop/POPDecayAnimation.mm; sourceTree = "<group>"; };
+		1BB0B8E89BB9037D385B6111546D54BC /* NSURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLResponse+Haneke.swift"; path = "Haneke/NSURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		1F4C3DB096656AC8F6EE64598EC0FB5B /* TransformationMatrix.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = TransformationMatrix.cpp; path = pop/WebCore/TransformationMatrix.cpp; sourceTree = "<group>"; };
+		21E34BD137F50F902E23180D6E9FA5DC /* POPAnimationTracerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracerInternal.h; path = pop/POPAnimationTracerInternal.h; sourceTree = "<group>"; };
+		2465137621C3BFFCCCCF108A119F32D7 /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
+		2B6D4B65A72AFC7D4BB3D46EA0302917 /* POPCustomAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCustomAnimation.mm; path = pop/POPCustomAnimation.mm; sourceTree = "<group>"; };
+		2BD87A7848BDEA1AEFF17F61867FBB70 /* Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Haneke.swift; path = Haneke/Haneke.swift; sourceTree = "<group>"; };
+		2CD5A7EA1DF1ADA417CF94221535A049 /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F0784B3DF4E4669AE1F24E4B7E20FC8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31AE8E586300A4AF51BD46FC572EF7CC /* POPPropertyAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimation.h; path = pop/POPPropertyAnimation.h; sourceTree = "<group>"; };
+		322890A91BD3C2C9D777269CDE5B1DB2 /* POPAnimatableProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimatableProperty.h; path = pop/POPAnimatableProperty.h; sourceTree = "<group>"; };
+		34DDA14B149A36DC576BDB78327F92A8 /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
+		364DFB5F64F03CB72E4CD9FCEBAF93B5 /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
+		3896B46C8A13C95A30F55E199EEC3C94 /* POPLayerExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPLayerExtras.mm; path = pop/POPLayerExtras.mm; sourceTree = "<group>"; };
+		38F398412A746FA3BB652FC6DD5E7ED7 /* POPLayerExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPLayerExtras.h; path = pop/POPLayerExtras.h; sourceTree = "<group>"; };
+		3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3B334936B6BA05A32A8E8E168EAF5504 /* HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HanekeSwift.modulemap; sourceTree = "<group>"; };
+		3C4275D7ADAA47481E9CB9754EEC8F33 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F954BDC8C583F7836D8D5F6A9276E68 /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
+		3F98D023D26C4CA223C366D168E51554 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40AC3EEB8EE8FC779DAF66203EE6366C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40D566AFF2FE5C62720F72BB6C1BF27E /* pop-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "pop-umbrella.h"; sourceTree = "<group>"; };
+		450DACCE48BA9A8475F5F30D6DEC1DC8 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
+		46C46FFC377EB4BDF777D462D5024BAB /* POPSpringSolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPSpringSolver.h; path = pop/POPSpringSolver.h; sourceTree = "<group>"; };
+		4797EA333612C3358F6956F5CF3AB198 /* POPBasicAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPBasicAnimation.mm; path = pop/POPBasicAnimation.mm; sourceTree = "<group>"; };
+		4B4A3907A03606271FADCF417A590293 /* POPPropertyAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPPropertyAnimation.mm; path = pop/POPPropertyAnimation.mm; sourceTree = "<group>"; };
+		4B7D011A61F68B95FB0AF84B814BF13C /* Pods-Gifme.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Gifme.modulemap"; sourceTree = "<group>"; };
+		4C3A2F9C7330A08BFC42E73EEC019A82 /* pop.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = pop.modulemap; sourceTree = "<group>"; };
+		4CABC284D823B97ABCB3873399ACA05C /* POPDecayAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDecayAnimation.h; path = pop/POPDecayAnimation.h; sourceTree = "<group>"; };
+		4D3183C2F8482D632E9262D3560D0D41 /* POPDecayAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDecayAnimationInternal.h; path = pop/POPDecayAnimationInternal.h; sourceTree = "<group>"; };
+		4E0FF53ED2834248AB9AF9D970F860DB /* POPAnimationExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationExtras.h; path = pop/POPAnimationExtras.h; sourceTree = "<group>"; };
+		4EDAF0ACB0BE2E74DE29098AF1216DAE /* Pods_Gifme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gifme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56AB40E33395E6C0F929E104BE334856 /* pop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = pop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57AB4C0D4EE1B4A6B7D0F76FA6E6E5D3 /* POPPropertyAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPPropertyAnimationInternal.h; path = pop/POPPropertyAnimationInternal.h; sourceTree = "<group>"; };
+		58D82C5A6503F5A1EF6E2EA48595A765 /* POPBasicAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPBasicAnimationInternal.h; path = pop/POPBasicAnimationInternal.h; sourceTree = "<group>"; };
+		5B0464388E742AC09CA94B8F3BBFD8AB /* UnitBezier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UnitBezier.h; path = pop/WebCore/UnitBezier.h; sourceTree = "<group>"; };
+		5E5A27AF764F16EB71EB27317168E02D /* POPSpringAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPSpringAnimation.mm; path = pop/POPSpringAnimation.mm; sourceTree = "<group>"; };
+		614750F5486494F0D83E7D0FD794F7F9 /* POPBasicAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPBasicAnimation.h; path = pop/POPBasicAnimation.h; sourceTree = "<group>"; };
+		65EAC6C3E58BC9B957B9DCE6BC9E808A /* SwiftGifOrigin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-umbrella.h"; sourceTree = "<group>"; };
+		69FA63844D454CD5CD52978C5719B040 /* POPCGUtils.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPCGUtils.mm; path = pop/POPCGUtils.mm; sourceTree = "<group>"; };
+		6D78F9C8EFF432D61091371D0F058987 /* HanekeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HanekeSwift-dummy.m"; sourceTree = "<group>"; };
+		6F00C41EDDD1587B621D0CB2D9EB0195 /* Pods-Gifme-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gifme-acknowledgements.plist"; sourceTree = "<group>"; };
+		72DED23832B12D6F4D930B5CA64C6C86 /* POPAnimator.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimator.mm; path = pop/POPAnimator.mm; sourceTree = "<group>"; };
+		768B20D455D9804A24D9C0D05EBE528F /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
+		7720740BD97580C7ED95D5D314DF936D /* HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
+		7F81CD1F25C6F5A9EA8E2AA8781D426D /* UIImage+Gif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "SwiftGifCommon/UIImage+Gif.swift"; sourceTree = "<group>"; };
+		8039C97291BD30713486B72F5CE18FF0 /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
+		847634DE166A5E0B2E4E2E21B04C9AA8 /* POPAnimationTracer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationTracer.mm; path = pop/POPAnimationTracer.mm; sourceTree = "<group>"; };
+		84A4CB32C810E32683130B614ACFD93F /* Pods-Gifme-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gifme-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8AEA1F9EDC2E1AB947EC1D6EF6CDFFF7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EEFC66EAD9E0ACB0AA7C1A4B85A81FA /* POPCustomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPCustomAnimation.h; path = pop/POPCustomAnimation.h; sourceTree = "<group>"; };
+		8F4D3C2ECEFD1CCFC9F710FBA35E731D /* SwiftGifOrigin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftGifOrigin-dummy.m"; sourceTree = "<group>"; };
+		91472D7ABD30F6253DE436276F084ECC /* Pods-Gifme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gifme.debug.xcconfig"; sourceTree = "<group>"; };
+		91B3EB1C89320933E4B78FB4224A5E0C /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9411F33F89905F1054A082C1DD97E52F /* FloatConversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FloatConversion.h; path = pop/WebCore/FloatConversion.h; sourceTree = "<group>"; };
+		95CE7623E419354357029504F2576BE5 /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
+		98AAFC1C109B58C232C5E8902393612B /* POPCGUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPCGUtils.h; path = pop/POPCGUtils.h; sourceTree = "<group>"; };
+		995F31C8CA7BABD9FB2CB1DA9E3967D3 /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
+		9974AB3B85FA0EAA2E8CEEE7A0D9302D /* POPDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPDefines.h; path = pop/POPDefines.h; sourceTree = "<group>"; };
+		9A99D74E07F429E67EA0374696EF5F83 /* POPAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimation.h; path = pop/POPAnimation.h; sourceTree = "<group>"; };
+		9ECF7DCB92BD82459331AE01BEB618C4 /* POPAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimation.mm; path = pop/POPAnimation.mm; sourceTree = "<group>"; };
+		9FCEEF8C9FAC27186023CA17A84A4728 /* POPGeometry.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPGeometry.mm; path = pop/POPGeometry.mm; sourceTree = "<group>"; };
+		A26B23C07357C73C29D170B659CD0138 /* pop-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "pop-prefix.pch"; sourceTree = "<group>"; };
+		A58AAFA326CF22C810B401AC8C7B1E11 /* POPAnimationExtras.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationExtras.mm; path = pop/POPAnimationExtras.mm; sourceTree = "<group>"; };
+		A7D75EDA5CF61560D17FDB40FA86F464 /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
+		A98F3E3F7AECCAEEA38A023EAD054C5D /* HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HanekeSwift.xcconfig; sourceTree = "<group>"; };
+		ACA2D7EEBC1BFD2235E1DE4FDA1DC0CC /* POPVector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPVector.h; path = pop/POPVector.h; sourceTree = "<group>"; };
+		AD8571DE4A3F8DB3C20EC22881DD1491 /* POPAnimationEvent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimationEvent.mm; path = pop/POPAnimationEvent.mm; sourceTree = "<group>"; };
+		B46B62BFBD7C75A65442F62FD47C934F /* Pods-Gifme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gifme.release.xcconfig"; sourceTree = "<group>"; };
+		B6BBC33E453752152A78B7AB678C452A /* POPGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPGeometry.h; path = pop/POPGeometry.h; sourceTree = "<group>"; };
+		BB993C3F590C1E347A82E96140C4834C /* SwiftGifOrigin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftGifOrigin-prefix.pch"; sourceTree = "<group>"; };
+		BDABD5A1D50BAE6E1AC0818F293B4099 /* POPMath.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPMath.mm; path = pop/POPMath.mm; sourceTree = "<group>"; };
+		BE1308A7F60A3A69EE915607808D2A91 /* TransformationMatrix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TransformationMatrix.h; path = pop/WebCore/TransformationMatrix.h; sourceTree = "<group>"; };
+		C008E8FD90BF24480A82728D2F5F96BC /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
+		C8E19BD54AD9B58965D224D2A724E431 /* POPAnimationEventInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationEventInternal.h; path = pop/POPAnimationEventInternal.h; sourceTree = "<group>"; };
+		CCB8BEE2D61DE4B2E0921D664294DB21 /* POP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POP.h; path = pop/POP.h; sourceTree = "<group>"; };
+		CF307A0BF778A8F9178914B44C638B49 /* pop-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "pop-dummy.m"; sourceTree = "<group>"; };
+		D35B89B9962DC62FCBFA969954B04FE6 /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
+		D726F763B41A9BACDA99FC3529BA6395 /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
+		D8E5C8432F89EF4E64676BA8E99D0391 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
+		E2514B9310AFDCC0F8B309C908A8CB04 /* POPAnimationEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationEvent.h; path = pop/POPAnimationEvent.h; sourceTree = "<group>"; };
+		E9690B823455A9AB01CE753A4102161A /* POPAnimationInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationInternal.h; path = pop/POPAnimationInternal.h; sourceTree = "<group>"; };
+		EAF24EDCB884A509D0A2A0937C07FBBD /* POPVector.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPVector.mm; path = pop/POPVector.mm; sourceTree = "<group>"; };
+		EB1A867A9B2D4BBE3B115C44317D0918 /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
+		ED5B8B60DF9F35862093DBAC1BE61332 /* Pods-Gifme-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gifme-frameworks.sh"; sourceTree = "<group>"; };
+		EF16AB22DE2710D59439F4634582966C /* SwiftGifOrigin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftGifOrigin.modulemap; sourceTree = "<group>"; };
+		EFF552515A9268D5A2388968BAAAF3DB /* POPAnimationTracer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimationTracer.h; path = pop/POPAnimationTracer.h; sourceTree = "<group>"; };
+		F698FBE77868244AE057AEE04D7BAFFB /* POPAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAnimator.h; path = pop/POPAnimator.h; sourceTree = "<group>"; };
+		F6A11F19B4AD6B059F1FB211C0FF03C9 /* SwiftGifOrigin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGifOrigin.xcconfig; sourceTree = "<group>"; };
+		F713B8630DD9CD14F7CB25C340D5F21F /* Fetch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetch.swift; path = Haneke/Fetch.swift; sourceTree = "<group>"; };
+		FACE744A0F9D3CCAFB1E8C1299EA1739 /* POPMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPMath.h; path = pop/POPMath.h; sourceTree = "<group>"; };
+		FDDE65D330E29F7638C6F5CDC432A0BD /* POPAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = POPAction.h; path = pop/POPAction.h; sourceTree = "<group>"; };
+		FFF9B9994344F140057965125D81D06F /* POPAnimatableProperty.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = POPAnimatableProperty.mm; path = pop/POPAnimatableProperty.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		058E924131079CF063CBE7CDC2077FC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				297BA46D645AAD8E9E866CC81294002F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		344E7C1BC4163296B2B3B5C0D4B87545 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AAB2C2B998FD11EA540298FA18100FF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4779ABD90DA7F70DBCF1789DC3F6137C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E38336847F38EDD3D2F1BB844D2E6C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E55176A5AF13111D389E09381931E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABA0D1D32E5616C0C69C6208706B4EEE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		112C7921E3A497328D11F4930CBBC9CA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		28A920149DE1CF5E42CFB8BE11CB727E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C7A653DDFD4B0885F18A2DE6F1C2344 /* Pods-Gifme */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3473FE678380201245030D520BCA342E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C4275D7ADAA47481E9CB9754EEC8F33 /* Info.plist */,
+				4C3A2F9C7330A08BFC42E73EEC019A82 /* pop.modulemap */,
+				152A58883FB82E9A7CFA6A7551E36F58 /* pop.xcconfig */,
+				CF307A0BF778A8F9178914B44C638B49 /* pop-dummy.m */,
+				A26B23C07357C73C29D170B659CD0138 /* pop-prefix.pch */,
+				40D566AFF2FE5C62720F72BB6C1BF27E /* pop-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/pop";
+			sourceTree = "<group>";
+		};
+		6C7A653DDFD4B0885F18A2DE6F1C2344 /* Pods-Gifme */ = {
+			isa = PBXGroup;
+			children = (
+				40AC3EEB8EE8FC779DAF66203EE6366C /* Info.plist */,
+				4B7D011A61F68B95FB0AF84B814BF13C /* Pods-Gifme.modulemap */,
+				84A4CB32C810E32683130B614ACFD93F /* Pods-Gifme-acknowledgements.markdown */,
+				6F00C41EDDD1587B621D0CB2D9EB0195 /* Pods-Gifme-acknowledgements.plist */,
+				17D5933E5310B7235C4328922FDC41F2 /* Pods-Gifme-dummy.m */,
+				ED5B8B60DF9F35862093DBAC1BE61332 /* Pods-Gifme-frameworks.sh */,
+				004B05C7C0B525ADDA37404B8D9B3C55 /* Pods-Gifme-resources.sh */,
+				0314D81471413DA8D81EBE937A2CD6DC /* Pods-Gifme-umbrella.h */,
+				91472D7ABD30F6253DE436276F084ECC /* Pods-Gifme.debug.xcconfig */,
+				B46B62BFBD7C75A65442F62FD47C934F /* Pods-Gifme.release.xcconfig */,
+			);
+			name = "Pods-Gifme";
+			path = "Target Support Files/Pods-Gifme";
+			sourceTree = "<group>";
+		};
+		72D399226783ECC19BB748BFF3EB151E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F0784B3DF4E4669AE1F24E4B7E20FC8 /* Info.plist */,
+				EF16AB22DE2710D59439F4634582966C /* SwiftGifOrigin.modulemap */,
+				F6A11F19B4AD6B059F1FB211C0FF03C9 /* SwiftGifOrigin.xcconfig */,
+				8F4D3C2ECEFD1CCFC9F710FBA35E731D /* SwiftGifOrigin-dummy.m */,
+				BB993C3F590C1E347A82E96140C4834C /* SwiftGifOrigin-prefix.pch */,
+				65EAC6C3E58BC9B957B9DCE6BC9E808A /* SwiftGifOrigin-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftGifOrigin";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CC54EF7F6C1D4ABA2E37160290408F5B /* Pods */,
+				96EEFC27F9A825904358A9779F62C003 /* Products */,
+				28A920149DE1CF5E42CFB8BE11CB727E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		85B71A64F86FA2670A2AB19923D3541E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B334936B6BA05A32A8E8E168EAF5504 /* HanekeSwift.modulemap */,
+				A98F3E3F7AECCAEEA38A023EAD054C5D /* HanekeSwift.xcconfig */,
+				6D78F9C8EFF432D61091371D0F058987 /* HanekeSwift-dummy.m */,
+				7720740BD97580C7ED95D5D314DF936D /* HanekeSwift-prefix.pch */,
+				768B20D455D9804A24D9C0D05EBE528F /* HanekeSwift-umbrella.h */,
+				8AEA1F9EDC2E1AB947EC1D6EF6CDFFF7 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HanekeSwift";
+			sourceTree = "<group>";
+		};
+		96EEFC27F9A825904358A9779F62C003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F98D023D26C4CA223C366D168E51554 /* Haneke.framework */,
+				4EDAF0ACB0BE2E74DE29098AF1216DAE /* Pods_Gifme.framework */,
+				56AB40E33395E6C0F929E104BE334856 /* pop.framework */,
+				2CD5A7EA1DF1ADA417CF94221535A049 /* SwiftGifOrigin.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				112C7921E3A497328D11F4930CBBC9CA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC54EF7F6C1D4ABA2E37160290408F5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB9A23B9424038C92ED5F843E70AE51A /* HanekeSwift */,
+				ECE80CBC1A5AACCF07555BF208BC7079 /* pop */,
+				DB2B0A9CAFC92771178153C13DDEBFF4 /* SwiftGifOrigin */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB2B0A9CAFC92771178153C13DDEBFF4 /* SwiftGifOrigin */ = {
+			isa = PBXGroup;
+			children = (
+				7F81CD1F25C6F5A9EA8E2AA8781D426D /* UIImage+Gif.swift */,
+				72D399226783ECC19BB748BFF3EB151E /* Support Files */,
+			);
+			path = SwiftGifOrigin;
+			sourceTree = "<group>";
+		};
+		EB9A23B9424038C92ED5F843E70AE51A /* HanekeSwift */ = {
+			isa = PBXGroup;
+			children = (
+				364DFB5F64F03CB72E4CD9FCEBAF93B5 /* Cache.swift */,
+				8039C97291BD30713486B72F5CE18FF0 /* CGSize+Swift.swift */,
+				34DDA14B149A36DC576BDB78327F92A8 /* CryptoSwiftMD5.swift */,
+				D8E5C8432F89EF4E64676BA8E99D0391 /* Data.swift */,
+				95CE7623E419354357029504F2576BE5 /* DiskCache.swift */,
+				3F954BDC8C583F7836D8D5F6A9276E68 /* DiskFetcher.swift */,
+				F713B8630DD9CD14F7CB25C340D5F21F /* Fetch.swift */,
+				995F31C8CA7BABD9FB2CB1DA9E3967D3 /* Fetcher.swift */,
+				2465137621C3BFFCCCCF108A119F32D7 /* Format.swift */,
+				2BD87A7848BDEA1AEFF17F61867FBB70 /* Haneke.swift */,
+				450DACCE48BA9A8475F5F30D6DEC1DC8 /* Log.swift */,
+				08CD0491680E4F4CDEFF0A9530B39132 /* NetworkFetcher.swift */,
+				D726F763B41A9BACDA99FC3529BA6395 /* NSFileManager+Haneke.swift */,
+				D35B89B9962DC62FCBFA969954B04FE6 /* NSHTTPURLResponse+Haneke.swift */,
+				1BB0B8E89BB9037D385B6111546D54BC /* NSURLResponse+Haneke.swift */,
+				91B3EB1C89320933E4B78FB4224A5E0C /* String+Haneke.swift */,
+				A7D75EDA5CF61560D17FDB40FA86F464 /* UIButton+Haneke.swift */,
+				C008E8FD90BF24480A82728D2F5F96BC /* UIImage+Haneke.swift */,
+				17EB1CDEFE773CA8A16386DD45C35D12 /* UIImageView+Haneke.swift */,
+				EB1A867A9B2D4BBE3B115C44317D0918 /* UIView+Haneke.swift */,
+				85B71A64F86FA2670A2AB19923D3541E /* Support Files */,
+			);
+			path = HanekeSwift;
+			sourceTree = "<group>";
+		};
+		ECE80CBC1A5AACCF07555BF208BC7079 /* pop */ = {
+			isa = PBXGroup;
+			children = (
+				9411F33F89905F1054A082C1DD97E52F /* FloatConversion.h */,
+				CCB8BEE2D61DE4B2E0921D664294DB21 /* POP.h */,
+				FDDE65D330E29F7638C6F5CDC432A0BD /* POPAction.h */,
+				322890A91BD3C2C9D777269CDE5B1DB2 /* POPAnimatableProperty.h */,
+				FFF9B9994344F140057965125D81D06F /* POPAnimatableProperty.mm */,
+				9A99D74E07F429E67EA0374696EF5F83 /* POPAnimation.h */,
+				9ECF7DCB92BD82459331AE01BEB618C4 /* POPAnimation.mm */,
+				E2514B9310AFDCC0F8B309C908A8CB04 /* POPAnimationEvent.h */,
+				AD8571DE4A3F8DB3C20EC22881DD1491 /* POPAnimationEvent.mm */,
+				C8E19BD54AD9B58965D224D2A724E431 /* POPAnimationEventInternal.h */,
+				4E0FF53ED2834248AB9AF9D970F860DB /* POPAnimationExtras.h */,
+				A58AAFA326CF22C810B401AC8C7B1E11 /* POPAnimationExtras.mm */,
+				E9690B823455A9AB01CE753A4102161A /* POPAnimationInternal.h */,
+				02446385BB1A605FB3A721E32922AB36 /* POPAnimationPrivate.h */,
+				050E751D6CBC35794FDB17305C5C3094 /* POPAnimationRuntime.h */,
+				00797C414B03B838E27DAE56D5C1BB0A /* POPAnimationRuntime.mm */,
+				EFF552515A9268D5A2388968BAAAF3DB /* POPAnimationTracer.h */,
+				847634DE166A5E0B2E4E2E21B04C9AA8 /* POPAnimationTracer.mm */,
+				21E34BD137F50F902E23180D6E9FA5DC /* POPAnimationTracerInternal.h */,
+				F698FBE77868244AE057AEE04D7BAFFB /* POPAnimator.h */,
+				72DED23832B12D6F4D930B5CA64C6C86 /* POPAnimator.mm */,
+				0AF355A7F5E18CE52B740F7290DDB063 /* POPAnimatorPrivate.h */,
+				614750F5486494F0D83E7D0FD794F7F9 /* POPBasicAnimation.h */,
+				4797EA333612C3358F6956F5CF3AB198 /* POPBasicAnimation.mm */,
+				58D82C5A6503F5A1EF6E2EA48595A765 /* POPBasicAnimationInternal.h */,
+				98AAFC1C109B58C232C5E8902393612B /* POPCGUtils.h */,
+				69FA63844D454CD5CD52978C5719B040 /* POPCGUtils.mm */,
+				8EEFC66EAD9E0ACB0AA7C1A4B85A81FA /* POPCustomAnimation.h */,
+				2B6D4B65A72AFC7D4BB3D46EA0302917 /* POPCustomAnimation.mm */,
+				4CABC284D823B97ABCB3873399ACA05C /* POPDecayAnimation.h */,
+				19BEF6CAD20ABDD183718AB1CD6E8924 /* POPDecayAnimation.mm */,
+				4D3183C2F8482D632E9262D3560D0D41 /* POPDecayAnimationInternal.h */,
+				9974AB3B85FA0EAA2E8CEEE7A0D9302D /* POPDefines.h */,
+				B6BBC33E453752152A78B7AB678C452A /* POPGeometry.h */,
+				9FCEEF8C9FAC27186023CA17A84A4728 /* POPGeometry.mm */,
+				38F398412A746FA3BB652FC6DD5E7ED7 /* POPLayerExtras.h */,
+				3896B46C8A13C95A30F55E199EEC3C94 /* POPLayerExtras.mm */,
+				FACE744A0F9D3CCAFB1E8C1299EA1739 /* POPMath.h */,
+				BDABD5A1D50BAE6E1AC0818F293B4099 /* POPMath.mm */,
+				31AE8E586300A4AF51BD46FC572EF7CC /* POPPropertyAnimation.h */,
+				4B4A3907A03606271FADCF417A590293 /* POPPropertyAnimation.mm */,
+				57AB4C0D4EE1B4A6B7D0F76FA6E6E5D3 /* POPPropertyAnimationInternal.h */,
+				18A7B20F4756C8B3048325A67E4A5FEF /* POPSpringAnimation.h */,
+				5E5A27AF764F16EB71EB27317168E02D /* POPSpringAnimation.mm */,
+				0BA14555E6642C126A51137F55669ED0 /* POPSpringAnimationInternal.h */,
+				46C46FFC377EB4BDF777D462D5024BAB /* POPSpringSolver.h */,
+				ACA2D7EEBC1BFD2235E1DE4FDA1DC0CC /* POPVector.h */,
+				EAF24EDCB884A509D0A2A0937C07FBBD /* POPVector.mm */,
+				1F4C3DB096656AC8F6EE64598EC0FB5B /* TransformationMatrix.cpp */,
+				BE1308A7F60A3A69EE915607808D2A91 /* TransformationMatrix.h */,
+				5B0464388E742AC09CA94B8F3BBFD8AB /* UnitBezier.h */,
+				3473FE678380201245030D520BCA342E /* Support Files */,
+			);
+			path = pop;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0C64655B97B501711541511851F1C8EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB02DD775A289B55B03F87A73525B611 /* HanekeSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC1C8B895F86362BF984D4A7E0A4AA75 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30FEC7AA5E3B076B215824D859932FBF /* Pods-Gifme-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFBCE7137227A7001A9AA76FCA140361 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB8CFBCDD285639D2EC001948D29E3D /* SwiftGifOrigin-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B56E0A3D8F8FF889B50A8EAF4A05AEB1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFF8570D2DE5B7A107CD4BCE8B3A80F /* FloatConversion.h in Headers */,
+				5FB5682CA2EE7DF9BCC6DBE1788739D0 /* pop-umbrella.h in Headers */,
+				EE3EC1DB2FCA9D919D99DA0206C55883 /* POP.h in Headers */,
+				463CCD202C890A1092831CE8B3542AD9 /* POPAction.h in Headers */,
+				0E703A455818E8DE327E1B7FE25985E9 /* POPAnimatableProperty.h in Headers */,
+				E7E349DA56867F3C6B9B3C2C8A1BC001 /* POPAnimation.h in Headers */,
+				EA314C274437EDF692DA020A6EF5D62C /* POPAnimationEvent.h in Headers */,
+				710535943DD9A5EF7F40FD41923290BF /* POPAnimationEventInternal.h in Headers */,
+				A12904578E66E5C1139C794117B10F06 /* POPAnimationExtras.h in Headers */,
+				187D61002BD10D8B309D460FF89E6B09 /* POPAnimationInternal.h in Headers */,
+				3DEF55E320F3CE6A4C1B367A70992A52 /* POPAnimationPrivate.h in Headers */,
+				8514DC0C650732FB1302E1A99FCA2095 /* POPAnimationRuntime.h in Headers */,
+				D1CC0E39C0F2867121F94DB63E29745D /* POPAnimationTracer.h in Headers */,
+				F6A643CA16C028665BC402B8C27BBEFF /* POPAnimationTracerInternal.h in Headers */,
+				2232F3D40FD21477C9AFBC3B1450312E /* POPAnimator.h in Headers */,
+				B7EAA82A35F46FE610D1B946A4600794 /* POPAnimatorPrivate.h in Headers */,
+				4AAB1304E6083F6AE9EEE9D3E3445B44 /* POPBasicAnimation.h in Headers */,
+				76ED75DA5C72A63A21A33957A28F0ABB /* POPBasicAnimationInternal.h in Headers */,
+				B70E367BD4A58D66CDCFEB17F6F619DA /* POPCGUtils.h in Headers */,
+				67F42CF591130C24B95ACAD9C2414B66 /* POPCustomAnimation.h in Headers */,
+				6AE28FF9A753BE00CC2349ECFBE9EEFB /* POPDecayAnimation.h in Headers */,
+				BF8AB427FD90D8B0B6DC5C1CDDF66FE0 /* POPDecayAnimationInternal.h in Headers */,
+				B43BAB89F549B5D4E50336A4C1BEFD3E /* POPDefines.h in Headers */,
+				02159528F48E844768002D0EDA08156C /* POPGeometry.h in Headers */,
+				1EACCDA69F0C1F2298AB2B1543C4F24A /* POPLayerExtras.h in Headers */,
+				EFDB0C2067FB24EF8F3695D53C70DE18 /* POPMath.h in Headers */,
+				237C898F95B771110A237FEECAAA56EC /* POPPropertyAnimation.h in Headers */,
+				D15C1141FEB21FA4F4C47427ED97C8CA /* POPPropertyAnimationInternal.h in Headers */,
+				D15794A8521A117E1D15A9A04C2D1BF1 /* POPSpringAnimation.h in Headers */,
+				8826FAB138D7D120A81884142F1218C8 /* POPSpringAnimationInternal.h in Headers */,
+				C03E309D4B750390A968E8D13DE179EF /* POPSpringSolver.h in Headers */,
+				12B84C5CD0F7E15596DD41046E90B92F /* POPVector.h in Headers */,
+				9516E33CEE846024D774317E1B81E926 /* TransformationMatrix.h in Headers */,
+				616F166A8D559675FCA695A41569FE31 /* UnitBezier.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		05099D409319AED085B0FBBE3345C3DD /* Pods-Gifme */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9659D71F2F0EA88469F39C67F42E7EEB /* Build configuration list for PBXNativeTarget "Pods-Gifme" */;
+			buildPhases = (
+				3DB5D88950FD8DFA94FA3BAB455F3BD4 /* Sources */,
+				344E7C1BC4163296B2B3B5C0D4B87545 /* Frameworks */,
+				AC1C8B895F86362BF984D4A7E0A4AA75 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CB6EC9502709BA70CF8698B95487D6 /* PBXTargetDependency */,
+				2731E85AC3BE9EBDD9B2DA3C4229B753 /* PBXTargetDependency */,
+				574B3A0E1901B8A791BA3D719191E89B /* PBXTargetDependency */,
+			);
+			name = "Pods-Gifme";
+			productName = "Pods-Gifme";
+			productReference = 4EDAF0ACB0BE2E74DE29098AF1216DAE /* Pods_Gifme.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2C2B1953A91633859BF7AD238FF567A0 /* HanekeSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72681BE87943D4976033F6522AE72050 /* Build configuration list for PBXNativeTarget "HanekeSwift" */;
+			buildPhases = (
+				CF172C07C6DA054AC5D84164A26DAE24 /* Sources */,
+				8F0E55176A5AF13111D389E09381931E /* Frameworks */,
+				0C64655B97B501711541511851F1C8EB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HanekeSwift;
+			productName = HanekeSwift;
+			productReference = 3F98D023D26C4CA223C366D168E51554 /* Haneke.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		44D0B3627B704910F68542F0FDBEBEF9 /* SwiftGifOrigin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 303708CC0ADE56D09B741B244A9648B4 /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */;
+			buildPhases = (
+				C8473F5D724FE7E83AC5BFD7E6AE447F /* Sources */,
+				058E924131079CF063CBE7CDC2077FC8 /* Frameworks */,
+				AFBCE7137227A7001A9AA76FCA140361 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftGifOrigin;
+			productName = SwiftGifOrigin;
+			productReference = 2CD5A7EA1DF1ADA417CF94221535A049 /* SwiftGifOrigin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BED38AC790380E0BAACBABDB2A2C8CAA /* pop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD2ADB6210CDF9FDB6F87769920177F2 /* Build configuration list for PBXNativeTarget "pop" */;
+			buildPhases = (
+				85565B2803BDD36367123D4A58F8D8E4 /* Sources */,
+				4779ABD90DA7F70DBCF1789DC3F6137C /* Frameworks */,
+				B56E0A3D8F8FF889B50A8EAF4A05AEB1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pop;
+			productName = pop;
+			productReference = 56AB40E33395E6C0F929E104BE334856 /* pop.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 96EEFC27F9A825904358A9779F62C003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C2B1953A91633859BF7AD238FF567A0 /* HanekeSwift */,
+				05099D409319AED085B0FBBE3345C3DD /* Pods-Gifme */,
+				BED38AC790380E0BAACBABDB2A2C8CAA /* pop */,
+				44D0B3627B704910F68542F0FDBEBEF9 /* SwiftGifOrigin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DB5D88950FD8DFA94FA3BAB455F3BD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9CA0DFA9CBB306139A0E14D194B4AF0 /* Pods-Gifme-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85565B2803BDD36367123D4A58F8D8E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0979D2886345A3D8B260550F77D2658 /* pop-dummy.m in Sources */,
+				A7C9121ECC418175A16B9B504BBD756F /* POPAnimatableProperty.mm in Sources */,
+				345C18ED23357FB4F0EBD71E754DCAB2 /* POPAnimation.mm in Sources */,
+				6E7EA00ABF8932E2902433186E254022 /* POPAnimationEvent.mm in Sources */,
+				4C67E8535CC156387D18D068C60DA40B /* POPAnimationExtras.mm in Sources */,
+				490631874B94C14CDBDF152F4AA3A399 /* POPAnimationRuntime.mm in Sources */,
+				3231C71274F2894799777A4A4C5767C8 /* POPAnimationTracer.mm in Sources */,
+				9A69CD802B48E811313ED1C04E3CF29F /* POPAnimator.mm in Sources */,
+				D1A04E413E7CFE6E1E8732642B5297AC /* POPBasicAnimation.mm in Sources */,
+				0356768025B5D1B25F512F4D4F763E64 /* POPCGUtils.mm in Sources */,
+				5877605360B212CC6A401624156FFEDA /* POPCustomAnimation.mm in Sources */,
+				432BE89FD99771522DBC09E5ABC8D5B5 /* POPDecayAnimation.mm in Sources */,
+				A25BDFD9D679FA23AAF7B1DE2298AFE5 /* POPGeometry.mm in Sources */,
+				76A8D8E88BDAFE4C975A1E2A32353E10 /* POPLayerExtras.mm in Sources */,
+				D1A37EE0E1098C8DF54A8C8425860EB2 /* POPMath.mm in Sources */,
+				AF440234AE79F69DDE33681CF6425FB7 /* POPPropertyAnimation.mm in Sources */,
+				5B772CFE057A5DC07564990F0F36AA1C /* POPSpringAnimation.mm in Sources */,
+				31E6F933A061182DCC597C7E9E987F3E /* POPVector.mm in Sources */,
+				5D5EC309457EDD89A54FD274484563FF /* TransformationMatrix.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8473F5D724FE7E83AC5BFD7E6AE447F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B50E86FE6956AD88D5FD86BE15F8A68 /* SwiftGifOrigin-dummy.m in Sources */,
+				3896A163D2F7896F7727F904D1AA4E4E /* UIImage+Gif.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF172C07C6DA054AC5D84164A26DAE24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9831DDC5256EF014D93FF2DBE055E7B6 /* Cache.swift in Sources */,
+				9F4D113C6A4469F0DFAC637F1CA2C087 /* CGSize+Swift.swift in Sources */,
+				9E629066D218DC1DC616E339DB68E49C /* CryptoSwiftMD5.swift in Sources */,
+				3D90F67A3A10F71FD01DEDA59496C1D7 /* Data.swift in Sources */,
+				AEB48C925DC8D4B812C4ABF9F15C822E /* DiskCache.swift in Sources */,
+				49A5E2B820A83801CEE267AA6E1D923F /* DiskFetcher.swift in Sources */,
+				B1CCF02E757EE856275CE85BF171ED90 /* Fetch.swift in Sources */,
+				8C357B44EA2BC147AA0219CD8CC03B5F /* Fetcher.swift in Sources */,
+				0D361BC02EA3B8C476545E29A293CCB8 /* Format.swift in Sources */,
+				BD038EFFD2D1B49B136B42B5E07D59C5 /* Haneke.swift in Sources */,
+				F03916F3658FFB4643AD5FC815A4F5A7 /* HanekeSwift-dummy.m in Sources */,
+				9911E1A886CD44872C07FAA6A1521A85 /* Log.swift in Sources */,
+				3EA2C091B8672D75066EEEEFE63B5A86 /* NetworkFetcher.swift in Sources */,
+				92A2D4839D45ABA48D77923C035C8943 /* NSFileManager+Haneke.swift in Sources */,
+				DF6DBB5FA4E663A5AE7F272CA1CBA3BB /* NSHTTPURLResponse+Haneke.swift in Sources */,
+				8A85C4CDF0FE775E0BD0C44B0C3E6159 /* NSURLResponse+Haneke.swift in Sources */,
+				55F3BC1465BB2EB6F02ADC5A2D1F9F83 /* String+Haneke.swift in Sources */,
+				1D27B06296C346D4F23F5ED14B0A5D1A /* UIButton+Haneke.swift in Sources */,
+				A8CF635DBE430F95FB17D371B918B3FB /* UIImage+Haneke.swift in Sources */,
+				24E7FCE3DF42DC6D616DC39F8AC69566 /* UIImageView+Haneke.swift in Sources */,
+				9D5F6868132325D38051C5A07F128C5C /* UIView+Haneke.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04CB6EC9502709BA70CF8698B95487D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HanekeSwift;
+			target = 2C2B1953A91633859BF7AD238FF567A0 /* HanekeSwift */;
+			targetProxy = 91B80FD5351E7FDF13360DE2A157B4EB /* PBXContainerItemProxy */;
+		};
+		2731E85AC3BE9EBDD9B2DA3C4229B753 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGifOrigin;
+			target = 44D0B3627B704910F68542F0FDBEBEF9 /* SwiftGifOrigin */;
+			targetProxy = A5E1ABB2541E1B3564DB83FC106A1BD3 /* PBXContainerItemProxy */;
+		};
+		574B3A0E1901B8A791BA3D719191E89B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = pop;
+			target = BED38AC790380E0BAACBABDB2A2C8CAA /* pop */;
+			targetProxy = 14AEB6C7D8298969D5F36FF5530C67F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1CFED0126751D0E5EB8EE9E7C619FFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152A58883FB82E9A7CFA6A7551E36F58 /* pop.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/pop/pop-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/pop/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/pop/pop.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = pop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2237F9087513721123EC78590124267E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B46B62BFBD7C75A65442F62FD47C934F /* Pods-Gifme.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Gifme/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gifme/Pods-Gifme.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Gifme;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6396977BD54CF323E225E3BA478F0B6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A98F3E3F7AECCAEEA38A023EAD054C5D /* HanekeSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Haneke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		70826D0316BF494C1EE58517220C384D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A789AD15C7069B9487F6E2A93DE8D319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A98F3E3F7AECCAEEA38A023EAD054C5D /* HanekeSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HanekeSwift/HanekeSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HanekeSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HanekeSwift/HanekeSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Haneke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C0CCEA32BF6C138A5554FA5059B22B1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C74665500B6B2B4453F938D9B107C089 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152A58883FB82E9A7CFA6A7551E36F58 /* pop.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/pop/pop-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/pop/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/pop/pop.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = pop;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D7BD06145BEA5E00A3FEE67B16FC8870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6A11F19B4AD6B059F1FB211C0FF03C9 /* SwiftGifOrigin.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftGifOrigin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D8F870B9E452E40E334A12BA47CBF898 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91472D7ABD30F6253DE436276F084ECC /* Pods-Gifme.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Gifme/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gifme/Pods-Gifme.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Gifme;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E0E48876B54AC986F50238B4E34E434D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6A11F19B4AD6B059F1FB211C0FF03C9 /* SwiftGifOrigin.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftGifOrigin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftGifOrigin/SwiftGifOrigin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftGifOrigin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70826D0316BF494C1EE58517220C384D /* Debug */,
+				C0CCEA32BF6C138A5554FA5059B22B1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		303708CC0ADE56D09B741B244A9648B4 /* Build configuration list for PBXNativeTarget "SwiftGifOrigin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7BD06145BEA5E00A3FEE67B16FC8870 /* Debug */,
+				E0E48876B54AC986F50238B4E34E434D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72681BE87943D4976033F6522AE72050 /* Build configuration list for PBXNativeTarget "HanekeSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6396977BD54CF323E225E3BA478F0B6B /* Debug */,
+				A789AD15C7069B9487F6E2A93DE8D319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9659D71F2F0EA88469F39C67F42E7EEB /* Build configuration list for PBXNativeTarget "Pods-Gifme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8F870B9E452E40E334A12BA47CBF898 /* Debug */,
+				2237F9087513721123EC78590124267E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD2ADB6210CDF9FDB6F87769920177F2 /* Build configuration list for PBXNativeTarget "pop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CFED0126751D0E5EB8EE9E7C619FFFE /* Debug */,
+				C74665500B6B2B4453F938D9B107C089 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
