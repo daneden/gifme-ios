@@ -1,0 +1,13 @@
+PODS:
+  - HanekeSwift (0.10.1)
+  - SwiftGifOrigin (1.5.3)
+
+DEPENDENCIES:
+  - HanekeSwift
+  - SwiftGifOrigin
+
+SPEC CHECKSUMS:
+  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  SwiftGifOrigin: 893ebcceabe215a00b607328b5322b4e228347e5
+
+COCOAPODS: 0.39.0
