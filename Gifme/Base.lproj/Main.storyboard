@@ -20,7 +20,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gifmeImageCell" id="vLl-7y-byN">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gifmeImageCell" id="vLl-7y-byN" customClass="GifmeCollectionViewCell" customModule="Gifme" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -35,9 +35,7 @@
                             <outlet property="delegate" destination="4QH-LT-Nj9" id="wSp-ih-4CS"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="vub-sg-2T9">
-                        <nil key="title"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Gifme" id="vub-sg-2T9"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eid-Up-dBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

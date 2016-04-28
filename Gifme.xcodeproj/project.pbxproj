@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0B41B2E6E349BC24A989FEE8 /* Pods_Gifme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA84795EE42159B4D539E57 /* Pods_Gifme.framework */; };
+		7193BD8C1CD1B83500269544 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193BD8B1CD1B83500269544 /* Reachability.swift */; };
+		7193BD8E1CD1BF2500269544 /* GifmeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193BD8D1CD1BF2500269544 /* GifmeButton.swift */; };
+		7193BD901CD1C68400269544 /* GifmeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193BD8F1CD1C68400269544 /* GifmeCollectionViewCell.swift */; };
 		71B89FE91CCD930400839C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B89FE81CCD930400839C06 /* AppDelegate.swift */; };
 		71B89FEE1CCD930400839C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B89FEC1CCD930400839C06 /* Main.storyboard */; };
 		71B89FF01CCD930400839C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B89FEF1CCD930400839C06 /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 /* Begin PBXFileReference section */
 		5DA84795EE42159B4D539E57 /* Pods_Gifme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gifme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7193BD8A1CD1833F00269544 /* GifmeBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifmeBridgingHeader.h; sourceTree = "<group>"; };
+		7193BD8B1CD1B83500269544 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		7193BD8D1CD1BF2500269544 /* GifmeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeButton.swift; sourceTree = "<group>"; };
+		7193BD8F1CD1C68400269544 /* GifmeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeCollectionViewCell.swift; sourceTree = "<group>"; };
 		71B89FE51CCD930400839C06 /* Gifme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gifme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B89FE81CCD930400839C06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71B89FED1CCD930400839C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,11 +129,14 @@
 				7193BD8A1CD1833F00269544 /* GifmeBridgingHeader.h */,
 				71B89FEC1CCD930400839C06 /* Main.storyboard */,
 				71F39D181CCDBD4200CD934E /* GifmeImageViewController.swift */,
+				7193BD8D1CD1BF2500269544 /* GifmeButton.swift */,
 				71B89FEF1CCD930400839C06 /* Assets.xcassets */,
 				71B89FF11CCD930400839C06 /* LaunchScreen.storyboard */,
 				71B89FF41CCD930400839C06 /* Info.plist */,
 				71CCC7BF1CCD9B8100275B28 /* GifmeViewController.swift */,
+				7193BD8F1CD1C68400269544 /* GifmeCollectionViewCell.swift */,
 				71F39D161CCDBB0000CD934E /* UIImage+Gif.swift */,
+				7193BD8B1CD1B83500269544 /* Reachability.swift */,
 			);
 			path = Gifme;
 			sourceTree = "<group>";
@@ -341,9 +350,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7193BD901CD1C68400269544 /* GifmeCollectionViewCell.swift in Sources */,
 				71F39D171CCDBB0000CD934E /* UIImage+Gif.swift in Sources */,
 				71B89FE91CCD930400839C06 /* AppDelegate.swift in Sources */,
 				71CCC7C01CCD9B8100275B28 /* GifmeViewController.swift in Sources */,
+				7193BD8C1CD1B83500269544 /* Reachability.swift in Sources */,
+				7193BD8E1CD1BF2500269544 /* GifmeButton.swift in Sources */,
 				71F39D191CCDBD4200CD934E /* GifmeImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
