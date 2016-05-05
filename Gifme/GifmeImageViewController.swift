@@ -8,6 +8,7 @@
 
 import UIKit
 import pop
+import AVKit
 
 class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -90,6 +91,10 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+    
     func initialiseViewWithActivityIndicator() {
         self.activityIndicator.center = self.view.center
         
@@ -120,16 +125,55 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         self.view.addConstraints([imageViewTopConstraint, imageViewRightConstraint, imageViewBottomConstraint, imageViewLeftConstraint])
     }
     
-    func initialiseImageView() {
-        var image:UIImage
+    func initialiseImageView() -> Bool {
+        let imageURL = NSURL(string: self.imageURL)
         
-        if self.imageURL.hasSuffix(".gif") {
-            image = UIImage.gifWithURL(self.imageURL)!
-            self.imageView.image = image
-        } else {
-            let imageURL = NSURL(string: self.imageURL)
-            self.imageView.hnk_setImageFromURL(imageURL!)
+        self.imageView.kf_setImageWithURL(imageURL!,
+                                          placeholderImage: nil,
+                                          optionsInfo: nil,
+                                          progressBlock: nil,
+                                          completionHandler: { (image, error, cacheType, imageURL) -> () in
+                                            self.showCopyingOptions()
         }
+        )
+        
+        return true
+    }
+    
+    func showCopyingOptions() {
+        // Make a button to close the modal
+        let button = GifmeButton(type: .Custom)
+        button.setTitle("Copy image", forState: .Normal)
+        button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        button.backgroundColor = self.view.tintColor
+        button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        
+        button.sizeToFit()
+        button.layer.cornerRadius = (button.frame.height/2)
+        
+        self.view.addSubview(button)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        let buttonXContraint = NSLayoutConstraint(item: button, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
+        let buttonYConstraint = NSLayoutConstraint(item: button, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -20.0)
+        buttonYConstraint.priority = UILayoutPriorityDefaultHigh
+        buttonXContraint.priority = UILayoutPriorityDefaultHigh
+        
+        self.view.addConstraints([buttonXContraint, buttonYConstraint])
+        
+        // Add entry animation for the button
+        let buttonAnimation = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
+        buttonAnimation.fromValue = 200.0
+        buttonAnimation.toValue = -20.0
+        buttonAnimation.springSpeed = 10
+        buttonAnimation.springBounciness = 6
+        buttonYConstraint.pop_addAnimation(buttonAnimation, forKey: "buttonEnterAnimation")
+        
+        // Add a gesture recogniser to the button
+        let gestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(dismissModal))
+        gestureRecogniser.delegate = self
+        
+        button.addGestureRecognizer(gestureRecogniser)
     }
     
     func dismissModal() {

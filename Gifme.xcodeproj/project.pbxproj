@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B41B2E6E349BC24A989FEE8 /* Pods_Gifme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DA84795EE42159B4D539E57 /* Pods_Gifme.framework */; };
 		7193BD8C1CD1B83500269544 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193BD8B1CD1B83500269544 /* Reachability.swift */; };
 		7193BD8E1CD1BF2500269544 /* GifmeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193BD8D1CD1BF2500269544 /* GifmeButton.swift */; };
 		7193BD901CD1C68400269544 /* GifmeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193BD8F1CD1C68400269544 /* GifmeCollectionViewCell.swift */; };
@@ -20,6 +19,7 @@
 		71CCC7C01CCD9B8100275B28 /* GifmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CCC7BF1CCD9B8100275B28 /* GifmeViewController.swift */; };
 		71F39D171CCDBB0000CD934E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F39D161CCDBB0000CD934E /* UIImage+Gif.swift */; };
 		71F39D191CCDBD4200CD934E /* GifmeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F39D181CCDBD4200CD934E /* GifmeImageViewController.swift */; };
+		C6472E519C5DC281E829465F /* Pods_Gifme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB74DB0FEB27336A5B798670 /* Pods_Gifme.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5DA84795EE42159B4D539E57 /* Pods_Gifme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gifme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5952D58B4C7B5EEDBF1D3562 /* Pods-Gifme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gifme/Pods-Gifme.release.xcconfig"; sourceTree = "<group>"; };
 		7193BD8A1CD1833F00269544 /* GifmeBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifmeBridgingHeader.h; sourceTree = "<group>"; };
 		7193BD8B1CD1B83500269544 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		7193BD8D1CD1BF2500269544 /* GifmeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeButton.swift; sourceTree = "<group>"; };
@@ -60,9 +60,9 @@
 		71CCC7BF1CCD9B8100275B28 /* GifmeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeViewController.swift; sourceTree = "<group>"; };
 		71F39D161CCDBB0000CD934E /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		71F39D181CCDBD4200CD934E /* GifmeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeImageViewController.swift; sourceTree = "<group>"; };
-		796A7232174480AEB38344FF /* Pods-Gifme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gifme/Pods-Gifme.debug.xcconfig"; sourceTree = "<group>"; };
+		8DEC4A566ABA566CBE10B476 /* Pods-Gifme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gifme/Pods-Gifme.debug.xcconfig"; sourceTree = "<group>"; };
 		8FF070E3E991D784BDC86E26 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F69A64F07939C11EDBFE78AF /* Pods-Gifme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gifme/Pods-Gifme.release.xcconfig"; sourceTree = "<group>"; };
+		CB74DB0FEB27336A5B798670 /* Pods_Gifme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gifme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B41B2E6E349BC24A989FEE8 /* Pods_Gifme.framework in Frameworks */,
+				C6472E519C5DC281E829465F /* Pods_Gifme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,11 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4548A9310D9554586E88C4B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DEC4A566ABA566CBE10B476 /* Pods-Gifme.debug.xcconfig */,
+				5952D58B4C7B5EEDBF1D3562 /* Pods-Gifme.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6724A45BE3C4F643BE42BCF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8FF070E3E991D784BDC86E26 /* Pods.framework */,
-				5DA84795EE42159B4D539E57 /* Pods_Gifme.framework */,
+				CB74DB0FEB27336A5B798670 /* Pods_Gifme.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,7 +117,7 @@
 				71B8A0071CCD930500839C06 /* GifmeUITests */,
 				71B89FE61CCD930400839C06 /* Products */,
 				6724A45BE3C4F643BE42BCF4 /* Frameworks */,
-				F811F2FE080443A914F51E33 /* Pods */,
+				4548A9310D9554586E88C4B5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,15 +168,6 @@
 			path = GifmeUITests;
 			sourceTree = "<group>";
 		};
-		F811F2FE080443A914F51E33 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				796A7232174480AEB38344FF /* Pods-Gifme.debug.xcconfig */,
-				F69A64F07939C11EDBFE78AF /* Pods-Gifme.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,12 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71B8A00D1CCD930500839C06 /* Build configuration list for PBXNativeTarget "Gifme" */;
 			buildPhases = (
-				E68FFBFDE59A7CBA9DDBB236 /* 📦 Check Pods Manifest.lock */,
+				88C3FBE955B70B490BDA846B /* 📦 Check Pods Manifest.lock */,
 				71B89FE11CCD930400839C06 /* Sources */,
 				71B89FE21CCD930400839C06 /* Frameworks */,
 				71B89FE31CCD930400839C06 /* Resources */,
-				028F5A7CACE9554A11E393CD /* 📦 Embed Pods Frameworks */,
-				050218BC992671CC219E1068 /* 📦 Copy Pods Resources */,
+				05FF18E0AC8BC3CA451E0767 /* 📦 Embed Pods Frameworks */,
+				77695FA2A0D61740CB77C375 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,7 +298,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		028F5A7CACE9554A11E393CD /* 📦 Embed Pods Frameworks */ = {
+		05FF18E0AC8BC3CA451E0767 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,7 +313,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gifme/Pods-Gifme-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		050218BC992671CC219E1068 /* 📦 Copy Pods Resources */ = {
+		77695FA2A0D61740CB77C375 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -328,7 +328,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gifme/Pods-Gifme-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E68FFBFDE59A7CBA9DDBB236 /* 📦 Check Pods Manifest.lock */ = {
+		88C3FBE955B70B490BDA846B /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -498,27 +498,31 @@
 		};
 		71B8A00E1CCD930500839C06 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 796A7232174480AEB38344FF /* Pods-Gifme.debug.xcconfig */;
+			baseConfigurationReference = 8DEC4A566ABA566CBE10B476 /* Pods-Gifme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Gifme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.daneden.Gifme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = Gifme/GifmeBridgingHeader.h;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		71B8A00F1CCD930500839C06 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F69A64F07939C11EDBFE78AF /* Pods-Gifme.release.xcconfig */;
+			baseConfigurationReference = 5952D58B4C7B5EEDBF1D3562 /* Pods-Gifme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Gifme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.daneden.Gifme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = Gifme/GifmeBridgingHeader.h;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

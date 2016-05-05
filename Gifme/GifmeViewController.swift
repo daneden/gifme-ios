@@ -8,6 +8,7 @@
 
 import UIKit
 import Haneke
+import Kingfisher
 
 class GifmeViewController: UICollectionViewController {
 
@@ -20,6 +21,11 @@ class GifmeViewController: UICollectionViewController {
         
         let cache = Shared.JSONCache
         let URL = NSURL(string: "https://gif.daneden.me/api/v0/all")!
+        
+        // Make sure we always get a fresh copy of the JSON if we're online
+        if(Reachability.connectedToNetwork()) {
+            cache.remove(key: "https://gif.daneden.me/api/v0/all")
+        }
         
         cache.fetch(URL: URL).onSuccess { JSON in
             let imageNames: [String] = (JSON.dictionary?["images"])! as! [String]
@@ -40,23 +46,18 @@ class GifmeViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseID, forIndexPath: indexPath)
-        cell.backgroundColor = UIColor.redColor()
         
-        let imageURL = NSURL(string: "https://degif.imgix.net/\(self.imageArray[indexPath.row])?f=jpg&q=40&w=250")
+        let imageURL = NSURL(string: "https://degif.imgix.net/\(self.imageArray[indexPath.row])?fm=jpg&auto=compress&w=248")
         let imageView = UIImageView()
-        let placeholderImage = UIImage(named: "placeholder-image")
+        let placeholderImage = UIImage(named: "placeholder")
         
-        imageView.hnk_setImageFromURL(imageURL!, placeholder: placeholderImage, format: Format<UIImage>(name: "124x124") {
-            let resizer = ImageResizer(size: CGSizeMake(124,124),
-                scaleMode: imageView.hnk_scaleMode
-            )
-            
-            return resizer.resizeImage($0)
-        })
+        imageView.kf_setImageWithURL(imageURL!, placeholderImage: placeholderImage)
         
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
         cell.backgroundView = imageView
         cell.contentView.translatesAutoresizingMaskIntoConstraints = false
+        
+        print(self.imageArray[indexPath.row])
         
         return cell
     }
@@ -72,15 +73,6 @@ class GifmeViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let imageName = self.imageArray[indexPath.row]
         let viewController = GifmeImageViewController()
-//        var image:UIImage
-//        
-//        if imageName.hasSuffix(".gif") {
-//            image = UIImage.gifWithURL("https://degif.imgix.net/\(imageName)")!
-//            viewController.imageView.image = image
-//        } else {
-//            let imageURL = NSURL(string: "https://degif.imgix.net/\(imageName)")
-//            viewController.imageView.hnk_setImageFromURL(imageURL!)
-//        }
         
         viewController.imageURL = "https://degif.imgix.net/\(imageName)"
         

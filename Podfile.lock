@@ -1,18 +1,21 @@
 PODS:
   - HanekeSwift (0.10.1)
+  - Kingfisher (2.4.0)
   - pop (1.0.9)
   - SwiftGifOrigin (1.5.3)
 
 DEPENDENCIES:
   - HanekeSwift
+  - Kingfisher
   - pop
   - SwiftGifOrigin
 
 SPEC CHECKSUMS:
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  Kingfisher: 9171a424ee7f8031f518f649bb850d1eab541247
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SwiftGifOrigin: 893ebcceabe215a00b607328b5322b4e228347e5
 
-PODFILE CHECKSUM: 676eb03e2ce7b068b2510526ed68db536972715a
+PODFILE CHECKSUM: cf319e3ce10c028eb41b07995d09ea5dcc8ef130
 
-COCOAPODS: 1.0.0.beta.8
+COCOAPODS: 1.0.0.rc.2
