@@ -41,23 +41,6 @@
             </objects>
             <point key="canvasLocation" x="1115" y="367"/>
         </scene>
-        <!--Gifme Image View Controller-->
-        <scene sceneID="vMO-Qj-3js">
-            <objects>
-                <viewController storyboardIdentifier="GifmeImageViewControllerTemplate" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0f3-Sf-JV6" customClass="GifmeImageViewController" customModule="Gifme" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="m4E-RV-lIA"/>
-                        <viewControllerLayoutGuide type="bottom" id="zjT-9C-A4c"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cqV-Ba-2fY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dwc-dB-Bu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1869" y="367"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="UYA-SD-iSe">
             <objects>

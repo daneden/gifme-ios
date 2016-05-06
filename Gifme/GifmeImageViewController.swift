@@ -9,12 +9,11 @@
 import UIKit
 import pop
 import AVKit
+import MobileCoreServices
 
 class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-    let warningLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 40))
-    let button = GifmeButton(type: .Custom)
     
     var imageView:UIImageView! = UIImageView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
     var imageURL:String = ""
@@ -22,12 +21,12 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-        
-        self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.85)
-        self.modalPresentationCapturesStatusBarAppearance = true
-        
         self.activityIndicator.hidesWhenStopped = true
+        
+        self.view.backgroundColor = UIColor.blackColor()
+        
+        let imageName = self.imageURL.componentsSeparatedByString("/")
+        self.title = imageName.last
         
         // Initialise an activity indicator
         initialiseViewWithActivityIndicator()
@@ -47,47 +46,40 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
             self.activityIndicator.stopAnimating()
             
             // Throw in our helpful label
-            self.warningLabel.text = "Unable to connect to network."
-            self.warningLabel.frame.size.width = (self.view.frame.width - 40)
-            self.warningLabel.center = self.view.center
-            self.warningLabel.textColor = UIColor.whiteColor()
-            self.warningLabel.textAlignment = NSTextAlignment.Center
-            self.view.addSubview(self.warningLabel)
+            let warningLabel = UILabel()
+            warningLabel.text = "Unable to connect to network."
+            warningLabel.frame.size.width = (self.view.frame.width - 40)
+            warningLabel.center = self.view.center
+            warningLabel.textColor = UIColor.whiteColor()
+            warningLabel.textAlignment = NSTextAlignment.Center
+            self.view.addSubview(warningLabel)
             
             // Add entry animation for the label
             let labelAnimation = POPSpringAnimation(propertyNamed: kPOPViewCenter)
             labelAnimation.fromValue = NSValue(CGPoint: CGPointMake(self.view.center.x, self.view.frame.height + 100))
-            labelAnimation.toValue = NSValue(CGPoint: self.warningLabel.center)
+            labelAnimation.toValue = NSValue(CGPoint: warningLabel.center)
             labelAnimation.springSpeed = 15
             labelAnimation.springBounciness = 6
-            self.warningLabel.pop_addAnimation(labelAnimation, forKey: "labelEnterAnimation")
+            warningLabel.pop_addAnimation(labelAnimation, forKey: "labelEnterAnimation")
             
             // Make a button to close the modal
-            self.button.setTitle("Well ok then", forState: .Normal)
-            self.button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            self.button.backgroundColor = self.view.tintColor
-            self.button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
-            
-            self.button.sizeToFit()
-            self.button.layer.cornerRadius = (self.button.frame.height/2)
-            
-            self.button.frame.origin.x = (self.view.frame.width/2) - (self.button.frame.width/2)
-            self.button.frame.origin.y = ((self.view.frame.height/2) - (self.button.frame.height/2)) + 60
-            self.view.addSubview(self.button)
+            let dismissButton = makeButton("Well ok then")
+            dismissButton.center = self.view.center
+            dismissButton.frame.origin.x = (self.view.frame.width/2) - (dismissButton.frame.width/2)
+            dismissButton.frame.origin.y = ((self.view.frame.height/2) - (dismissButton.frame.height/2)) + 60
+            self.view.addSubview(dismissButton)
             
             // Add entry animation for the button
-            let buttonAnimation = POPSpringAnimation(propertyNamed: kPOPViewCenter)
-            buttonAnimation.fromValue = NSValue(CGPoint: CGPointMake(self.view.center.x, self.view.frame.height + 100))
-            buttonAnimation.toValue = NSValue(CGPoint: self.button.center)
-            buttonAnimation.springSpeed = 10
-            buttonAnimation.springBounciness = 6
-            self.button.pop_addAnimation(buttonAnimation, forKey: "buttonEnterAnimation")
+            let fromValue = NSValue(CGPoint: CGPointMake(self.view.center.x, self.view.frame.height + 100))
+            let toValue = NSValue(CGPoint: dismissButton.center)
+            let buttonAnimation = makeAnimation(kPOPViewCenter, from: fromValue, to: toValue)
+            dismissButton.pop_addAnimation(buttonAnimation, forKey: "buttonEnterAnimation")
             
             // Add a gesture recogniser to the button
             let gestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(dismissModal))
             gestureRecogniser.delegate = self
             
-            self.button.addGestureRecognizer(gestureRecogniser)
+            dismissButton.addGestureRecognizer(gestureRecogniser)
         }
     }
     
@@ -104,82 +96,71 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func initialiseViewWithImageView(imageURL:String) {
+        if self.imageURL.hasSuffix(".gif") {
+            self.imageView = AnimatedImageView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        }
+        
         self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         
-        let gestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(dismissModal))
-        gestureRecogniser.delegate = self
-        
-        imageView.userInteractionEnabled = true
-        
-        imageView.addGestureRecognizer(gestureRecogniser)
-        
         self.view.addSubview(self.imageView)
         
-        let imageViewTopConstraint = NSLayoutConstraint(item: self.imageView, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 0.0)
-        let imageViewRightConstraint = NSLayoutConstraint(item: self.imageView, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: 0.0)
-        let imageViewBottomConstraint = NSLayoutConstraint(item: self.imageView, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 0.0)
-        let imageViewLeftConstraint = NSLayoutConstraint(item: self.imageView, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0.0)
+        let constraintEdges:[NSLayoutAttribute] = [.Top, .Right, .Bottom, .Left]
+        var constraints:[NSLayoutConstraint] = []
+        
+        for edge in constraintEdges {
+            let constraint = NSLayoutConstraint(item: self.imageView, attribute: edge, relatedBy: .Equal, toItem: self.view, attribute: edge, multiplier: 1.0, constant: 0.0)
+            constraints.append(constraint)
+        }
         
         // Add layout constraints to the view
-        self.view.addConstraints([imageViewTopConstraint, imageViewRightConstraint, imageViewBottomConstraint, imageViewLeftConstraint])
+        self.view.addConstraints(constraints)
     }
     
     func initialiseImageView() -> Bool {
         let imageURL = NSURL(string: self.imageURL)
         
-        self.imageView.kf_setImageWithURL(imageURL!,
-                                          placeholderImage: nil,
-                                          optionsInfo: nil,
-                                          progressBlock: nil,
-                                          completionHandler: { (image, error, cacheType, imageURL) -> () in
-                                            self.showCopyingOptions()
-        }
-        )
+        self.imageView.kf_setImageWithURL(imageURL!, placeholderImage: nil, optionsInfo: nil, progressBlock: nil,
+            completionHandler: { (image, error, cacheType, imageURL) -> () in
+                self.showCopyingOptions()
+                self.activityIndicator.stopAnimating()
+        })
         
         return true
     }
     
     func showCopyingOptions() {
         // Make a button to close the modal
-        let button = GifmeButton(type: .Custom)
-        button.setTitle("Copy image", forState: .Normal)
-        button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        button.backgroundColor = self.view.tintColor
-        button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
-        
-        button.sizeToFit()
-        button.layer.cornerRadius = (button.frame.height/2)
+        let button = makeButton("Copy image")
         
         self.view.addSubview(button)
         
         button.translatesAutoresizingMaskIntoConstraints = false
         let buttonXContraint = NSLayoutConstraint(item: button, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
         let buttonYConstraint = NSLayoutConstraint(item: button, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -20.0)
-        buttonYConstraint.priority = UILayoutPriorityDefaultHigh
-        buttonXContraint.priority = UILayoutPriorityDefaultHigh
         
         self.view.addConstraints([buttonXContraint, buttonYConstraint])
         
         // Add entry animation for the button
-        let buttonAnimation = POPSpringAnimation(propertyNamed: kPOPLayoutConstraintConstant)
-        buttonAnimation.fromValue = 200.0
-        buttonAnimation.toValue = -20.0
-        buttonAnimation.springSpeed = 10
-        buttonAnimation.springBounciness = 6
+        let buttonAnimation = makeAnimation(kPOPLayoutConstraintConstant, from: 200.0, to: 20.0)
         buttonYConstraint.pop_addAnimation(buttonAnimation, forKey: "buttonEnterAnimation")
         
         // Add a gesture recogniser to the button
-        let gestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(dismissModal))
+        let gestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(copyImage))
         gestureRecogniser.delegate = self
         
         button.addGestureRecognizer(gestureRecogniser)
     }
     
     func dismissModal() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        navigationController?.popViewControllerAnimated(true)
     }
     
+    func copyImage() {
+        let pasteboard = UIPasteboard.generalPasteboard()
+        let imageData = self.imageView.image?.kf_animatedImageData
+        pasteboard.setData(imageData!, forPasteboardType: kUTTypeGIF as String)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

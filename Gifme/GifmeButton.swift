@@ -22,19 +22,25 @@ class GifmeButton: UIButton {
     override var highlighted: Bool {
         didSet {
             if (highlighted) {
-                let animation = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
-                animation.velocity = NSValue(CGPoint: CGPointMake(2, 2))
-                animation.springSpeed = 20
-                animation.springBounciness = 15
-                animation.toValue = NSValue(CGPoint: CGPoint(x: 0.9, y: 0.9))
-                self.pop_addAnimation(animation, forKey: "buttonPressedAnimation")
+                self.alpha = 0.5
             } else {
-                let animation = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
-                animation.duration = 0.5
-                animation.toValue = NSValue(CGPoint: CGPoint(x: 1.0, y: 1.0))
-                self.pop_addAnimation(animation, forKey: "buttonReleasedAnimation")
+                self.alpha = 1
             }
         }
     }
+}
 
+func makeButton(label: String) -> GifmeButton {
+    let button = GifmeButton(type: .Custom)
+    
+    button.setTitle("\(label)", forState: .Normal)
+    
+    button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+    button.backgroundColor = UIApplication.sharedApplication().keyWindow?.tintColor
+    button.contentEdgeInsets = UIEdgeInsets(top: 9, left: 20, bottom: 10, right: 20)
+    
+    button.sizeToFit()
+    button.layer.cornerRadius = (button.frame.height/2)
+
+    return button
 }

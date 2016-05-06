@@ -8,16 +8,27 @@
 
 import UIKit
 import Haneke
-import Kingfisher
 
-class GifmeViewController: UICollectionViewController {
+class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
 
     private let reuseID = "gifmeImageCell"
     
     var imageArray:[String] = []
+    var filteredImages:[String] = []
+    
+    let searchBar:UISearchBar = UISearchBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let searchBar = self.searchBar
+        searchBar.delegate = self
+        searchBar.sizeToFit()
+        searchBar.barStyle = .Black
+        searchBar.placeholder = "Search gif.daneden.me"
+        searchBar.autocapitalizationType = .None
+        searchBar.keyboardAppearance = .Dark
+        navigationItem.titleView = searchBar
         
         let cache = Shared.JSONCache
         let URL = NSURL(string: "https://gif.daneden.me/api/v0/all")!
@@ -36,18 +47,20 @@ class GifmeViewController: UICollectionViewController {
                 self.imageArray.append(imageURL)
             }
             
+            self.filteredImages = self.imageArray
+            
             self.collectionView?.reloadData()
         }
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.imageArray.count
+        return self.filteredImages.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseID, forIndexPath: indexPath)
         
-        let imageURL = NSURL(string: "https://degif.imgix.net/\(self.imageArray[indexPath.row])?fm=jpg&auto=compress&w=248")
+        let imageURL = NSURL(string: "https://degif.imgix.net/\(self.filteredImages[indexPath.row])?fm=jpg&auto=compress&w=248")
         let imageView = UIImageView()
         let placeholderImage = UIImage(named: "placeholder")
         
@@ -57,9 +70,24 @@ class GifmeViewController: UICollectionViewController {
         cell.backgroundView = imageView
         cell.contentView.translatesAutoresizingMaskIntoConstraints = false
         
-        print(self.imageArray[indexPath.row])
-        
         return cell
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if(searchBar.text?.isEmpty == true) {
+            self.filteredImages = self.imageArray
+        } else {
+            self.filteredImages = self.imageArray.filter({( name: String) -> Bool in
+                let stringMatch = name.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+                return (stringMatch != nil)
+            })
+        }
+        
+        self.collectionView?.reloadData()
+    }
+    
+    override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        self.searchBar.resignFirstResponder()
     }
     
     func collectionView(collectionView: UICollectionView,
@@ -71,14 +99,14 @@ class GifmeViewController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let imageName = self.imageArray[indexPath.row]
+        let imageName = self.filteredImages[indexPath.row]
         let viewController = GifmeImageViewController()
         
         viewController.imageURL = "https://degif.imgix.net/\(imageName)"
         
-        viewController.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
-        viewController.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-        self.presentViewController(viewController, animated: true, completion: nil)
+        self.searchBar.resignFirstResponder()
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 
 }

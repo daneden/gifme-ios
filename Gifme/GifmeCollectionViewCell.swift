@@ -13,17 +13,13 @@ class GifmeCollectionViewCell: UICollectionViewCell {
     override var highlighted: Bool {
         didSet {
             if (highlighted) {
-                let animation = POPSpringAnimation(propertyNamed: kPOPViewScaleXY)
-                animation.velocity = NSValue(CGPoint: CGPointMake(2, 2))
-                animation.springSpeed = 20
-                animation.springBounciness = 15
-                animation.toValue = NSValue(CGPoint: CGPoint(x: 0.9, y: 0.9))
-                self.pop_addAnimation(animation, forKey: "buttonPressedAnimation")
+                UIView.animateWithDuration(0.2, animations: {
+                    self.alpha = 0.5
+                })
             } else {
-                let animation = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
-                animation.duration = 0.5
-                animation.toValue = NSValue(CGPoint: CGPoint(x: 1.0, y: 1.0))
-                self.pop_addAnimation(animation, forKey: "buttonReleasedAnimation")
+                UIView.animateWithDuration(0.2, animations: {
+                    self.alpha = 1
+                })
             }
         }
     }
