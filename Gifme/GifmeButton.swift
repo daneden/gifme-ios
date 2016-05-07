@@ -40,6 +40,8 @@ func makeButton(label: String) -> GifmeButton {
     button.contentEdgeInsets = UIEdgeInsets(top: 9, left: 20, bottom: 10, right: 20)
     
     button.sizeToFit()
+    button.translatesAutoresizingMaskIntoConstraints = false
+    
     button.layer.cornerRadius = (button.frame.height/2)
 
     return button

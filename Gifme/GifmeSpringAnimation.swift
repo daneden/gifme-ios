@@ -9,11 +9,16 @@
 import Foundation
 import pop
 
-func makeAnimation(property: String, from: AnyObject, to: AnyObject) -> POPSpringAnimation {
+func makeAnimation(property: String, from: AnyObject?, to: AnyObject?) -> POPSpringAnimation {
     let anim = POPSpringAnimation(propertyNamed: property)
     
-    anim.fromValue = from
-    anim.toValue = to
+    if(from != nil) {
+        anim.fromValue = from
+    }
+    
+    if(to != nil) {
+        anim.toValue = to
+    }
     
     anim.springSpeed = 10
     anim.springBounciness = 6

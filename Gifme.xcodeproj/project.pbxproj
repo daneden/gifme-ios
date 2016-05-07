@@ -24,7 +24,6 @@
 		719F8DC51CDCA5FD004739F5 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F8DB01CDCA5FD004739F5 /* ThreadHelper.swift */; };
 		719F8DC61CDCA5FD004739F5 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F8DB11CDCA5FD004739F5 /* UIButton+Kingfisher.swift */; };
 		719F8DC71CDCA5FD004739F5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 719F8DB21CDCA5FD004739F5 /* Info.plist */; };
-		719F8DC81CDCA5FD004739F5 /* Kingfisher.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 719F8DB41CDCA5FD004739F5 /* Kingfisher.xcconfig */; };
 		719F8DC91CDCA5FD004739F5 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 719F8DB51CDCA5FD004739F5 /* Kingfisher-dummy.m */; };
 		71B89FE91CCD930400839C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B89FE81CCD930400839C06 /* AppDelegate.swift */; };
 		71B89FEE1CCD930400839C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B89FEC1CCD930400839C06 /* Main.storyboard */; };
@@ -352,7 +351,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				719F8DC81CDCA5FD004739F5 /* Kingfisher.xcconfig in Resources */,
 				719F8DC71CDCA5FD004739F5 /* Info.plist in Resources */,
 				71B89FF31CCD930400839C06 /* LaunchScreen.storyboard in Resources */,
 				71B89FF01CCD930400839C06 /* Assets.xcassets in Resources */,
