@@ -80,7 +80,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     func initialiseImageView() {
         let fullImageURL = NSURL(string: self.imageURL)
         
-        let options:KingfisherOptionsInfo = [KingfisherOptionsInfoItem.Transition(ImageTransition.Fade(0.5))]
+        let options:KingfisherOptionsInfo = [KingfisherOptionsInfoItem.Transition(ImageTransition.Fade(0.25)), KingfisherOptionsInfoItem.PreloadAllGIFData]
         
         self.imageView.kf_setImageWithURL(fullImageURL!, placeholderImage: nil, optionsInfo: options, progressBlock: nil,
             completionHandler: { (image, error, cacheType, imageURL) -> () in
