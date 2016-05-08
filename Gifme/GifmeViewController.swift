@@ -102,7 +102,7 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
         let imageName = self.filteredImages[indexPath.row]
         let viewController = GifmeImageViewController()
         
-        viewController.imageURL = "https://degif.imgix.net/\(imageName)"
+        viewController.imageURL = "https://gif.daneden.me/\(imageName)"
         
         self.searchBar.resignFirstResponder()
         

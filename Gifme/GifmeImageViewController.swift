@@ -20,6 +20,8 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     var imageURL:String = ""
     var imageName:String = ""
     
+    let progressBar = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 4))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +32,10 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         let imageName = self.imageURL.componentsSeparatedByString("/")
         self.imageName = imageName.last!
         self.title = self.imageName
+        
+        self.progressBar.backgroundColor = UIApplication.sharedApplication().keyWindow?.tintColor
+        self.view.addSubview(self.progressBar)
+
         
         // Initialise an activity indicator
         initialiseViewWithActivityIndicator()
@@ -80,9 +86,17 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     func initialiseImageView() {
         let fullImageURL = NSURL(string: self.imageURL)
         
-        let options:KingfisherOptionsInfo = [KingfisherOptionsInfoItem.Transition(ImageTransition.Fade(0.25)), KingfisherOptionsInfoItem.PreloadAllGIFData]
+        let options:KingfisherOptionsInfo = [
+            KingfisherOptionsInfoItem.Transition(ImageTransition.Fade(0.25)),
+            KingfisherOptionsInfoItem.PreloadAllGIFData
+        ]
         
-        self.imageView.kf_setImageWithURL(fullImageURL!, placeholderImage: nil, optionsInfo: options, progressBlock: nil,
+        self.imageView.kf_setImageWithURL(fullImageURL!, placeholderImage: nil, optionsInfo: options,
+            progressBlock: { (receivedSize, totalSize) -> () in
+                self.view.addSubview(self.progressBar)
+                let progress = Double(Float(receivedSize)/Float(totalSize))
+                self.updateProgress(progress)
+            },
             completionHandler: { (image, error, cacheType, imageURL) -> () in
                 self.activityIndicator.stopAnimating()
                 if(error === nil) {
@@ -91,6 +105,21 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
                     self.handleImageLoadingError()
                 }
         })
+    }
+    
+    func updateProgress(progress: Double) {
+        // progress is a percentage represented as a decimal range between 0 and 1
+        if(progress==1) {
+            UIView.animateWithDuration(0.5, animations: { 
+                self.progressBar.frame = CGRectMake(0, (self.navigationController?.navigationBar.frame.height)!+20, self.view.frame.width, 0)
+                }, completion: { (complete) in
+                    self.progressBar.removeFromSuperview()
+            })
+        } else {
+            UIView.animateWithDuration(0.5, animations: {
+                self.progressBar.frame = CGRectMake(0, (self.navigationController?.navigationBar.frame.height)!+20, (self.view.frame.width * CGFloat(progress)), 4)
+                }, completion: nil)
+        }
     }
     
     func handleImageLoadingError() {
