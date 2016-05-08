@@ -47,6 +47,10 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
                 self.imageArray.append(imageURL)
             }
             
+            print(self.imageArray.first)
+            
+            self.imageArray.shuffleInPlace()
+            print(self.imageArray.first)
             self.filteredImages = self.imageArray
             
             self.collectionView?.reloadData()

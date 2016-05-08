@@ -20,6 +20,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     var imageURL:String = ""
     var imageName:String = ""
     
+    var progressBarTop = CGFloat(0)
     let progressBar = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 4))
     
     override func viewDidLoad() {
@@ -34,6 +35,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         self.title = self.imageName
         
         self.progressBar.backgroundColor = UIApplication.sharedApplication().keyWindow?.tintColor
+        self.progressBarTop = (self.navigationController?.navigationBar.frame.size.height)! + (self.navigationController?.topLayoutGuide.length)!
         self.view.addSubview(self.progressBar)
 
         
@@ -110,14 +112,22 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     func updateProgress(progress: Double) {
         // progress is a percentage represented as a decimal range between 0 and 1
         if(progress==1) {
-            UIView.animateWithDuration(0.5, animations: { 
-                self.progressBar.frame = CGRectMake(0, (self.navigationController?.navigationBar.frame.height)!+20, self.view.frame.width, 0)
+            UIView.animateWithDuration(0.2, animations: {
+                // Animate the progress bar to completion
+                self.progressBar.frame = CGRectMake(0, self.progressBarTop, self.view.frame.width, 4)
                 }, completion: { (complete) in
-                    self.progressBar.removeFromSuperview()
+                    // Wait 2 seconds then remove the progress bar
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2)), dispatch_get_main_queue(), { 
+                        UIView.animateWithDuration(0.2, animations: { 
+                            self.progressBar.frame = CGRectMake(0, self.progressBarTop, self.view.frame.width, 0)
+                            }, completion: { (complete) in
+                                self.progressBar.removeFromSuperview()
+                        })
+                    })
             })
         } else {
-            UIView.animateWithDuration(0.5, animations: {
-                self.progressBar.frame = CGRectMake(0, (self.navigationController?.navigationBar.frame.height)!+20, (self.view.frame.width * CGFloat(progress)), 4)
+            UIView.animateWithDuration(0.2, animations: {
+                self.progressBar.frame = CGRectMake(0, self.progressBarTop, (self.view.frame.width * CGFloat(progress)), 4)
                 }, completion: nil)
         }
     }
