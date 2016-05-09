@@ -16,12 +16,12 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
     
-    var imageView:UIImageView! = UIImageView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+    var imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
     var imageURL:String = ""
     var imageName:String = ""
     
     var progressBarTop = CGFloat(0)
-    let progressBar = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 4))
+    let progressBar = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 2))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         self.progressBar.backgroundColor = UIApplication.sharedApplication().keyWindow?.tintColor
         self.progressBarTop = (self.navigationController?.navigationBar.frame.size.height)! + (self.navigationController?.topLayoutGuide.length)!
-        self.view.addSubview(self.progressBar)
+        UIApplication.sharedApplication().keyWindow!.addSubview(self.progressBar)
 
         
         // Initialise an activity indicator
@@ -64,10 +64,6 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func initialiseViewWithImageView(imageURL:String) {
-        if self.imageURL.hasSuffix(".gif") {
-            self.imageView = AnimatedImageView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
-        }
-        
         self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -89,8 +85,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         let fullImageURL = NSURL(string: self.imageURL)
         
         let options:KingfisherOptionsInfo = [
-            KingfisherOptionsInfoItem.Transition(ImageTransition.Fade(0.25)),
-            KingfisherOptionsInfoItem.PreloadAllGIFData
+            .Transition(ImageTransition.Fade(0.25))
         ]
         
         self.imageView.kf_setImageWithURL(fullImageURL!, placeholderImage: nil, optionsInfo: options,
@@ -114,7 +109,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         if(progress==1) {
             UIView.animateWithDuration(0.2, animations: {
                 // Animate the progress bar to completion
-                self.progressBar.frame = CGRectMake(0, self.progressBarTop, self.view.frame.width, 4)
+                self.progressBar.frame = CGRectMake(0, self.progressBarTop, self.view.frame.width, 2)
                 }, completion: { (complete) in
                     // Wait 2 seconds then remove the progress bar
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2)), dispatch_get_main_queue(), { 
@@ -127,7 +122,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
             })
         } else {
             UIView.animateWithDuration(0.2, animations: {
-                self.progressBar.frame = CGRectMake(0, self.progressBarTop, (self.view.frame.width * CGFloat(progress)), 4)
+                self.progressBar.frame = CGRectMake(0, self.progressBarTop, (self.view.frame.width * CGFloat(progress)), 2)
                 }, completion: nil)
         }
     }
