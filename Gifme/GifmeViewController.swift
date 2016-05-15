@@ -61,8 +61,10 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseID, forIndexPath: indexPath)
+    
+        let stringURL = self.filteredImages[indexPath.row].stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLPathAllowedCharacterSet())
         
-        let imageURL = NSURL(string: "https://degif.imgix.net/\(self.filteredImages[indexPath.row])?fm=jpg&auto=compress&w=248")
+        let imageURL = NSURL(string: "https://degif.imgix.net/\(stringURL!)?fm=jpg&auto=compress&w=248")
         let imageView = UIImageView()
         let placeholderImage = UIImage(named: "placeholder")
         
@@ -104,7 +106,7 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
         let imageName = self.filteredImages[indexPath.row]
         let viewController = GifmeImageViewController()
         
-        viewController.imageURL = "https://gif.daneden.me/\(imageName)"
+        viewController.imageName = imageName
         
         self.searchBar.resignFirstResponder()
         

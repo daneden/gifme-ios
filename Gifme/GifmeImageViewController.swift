@@ -16,7 +16,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
     
-    var imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+    var imageView:AnimatedImageView = AnimatedImageView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
     var imageURL:String = ""
     var imageName:String = ""
     
@@ -26,29 +26,29 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Tell the activity indicator to hide when stopped
         self.activityIndicator.hidesWhenStopped = true
         
+        // Set the view's background color
         self.view.backgroundColor = UIColor.blackColor()
         
-        let imageName = self.imageURL.componentsSeparatedByString("/")
-        self.imageName = imageName.last!
+        // Make sure the URL is safely encoded
+        self.imageURL = self.imageName.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLPathAllowedCharacterSet())!
+        self.imageURL = "https://gif.daneden.me/" + self.imageURL
+        
+        // Set the image name and view title
         self.title = self.imageName
         
+        // Create the progress bar view
         self.progressBar.backgroundColor = UIApplication.sharedApplication().keyWindow?.tintColor
         self.progressBarTop = (self.navigationController?.navigationBar.frame.size.height)! + (self.navigationController?.topLayoutGuide.length)!
         UIApplication.sharedApplication().keyWindow!.addSubview(self.progressBar)
-
         
-        // Initialise an activity indicator
+        // Initialise the activity indicator
         initialiseViewWithActivityIndicator()
         
         // Initialise the image view
-        initialiseViewWithImageView(self.imageURL)
-        
-        ToastManager.shared.queueEnabled = false
-        
-        // If we have network connectivity, load the remote image
-        initialiseImageView()
+        initialiseViewWithImageView()
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -63,7 +63,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         self.view.addSubview(activityIndicator)
     }
     
-    func initialiseViewWithImageView(imageURL:String) {
+    func initialiseViewWithImageView() {
         self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -79,16 +79,23 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         // Add layout constraints to the view
         self.view.addConstraints(constraints)
+        
+        // If we have network connectivity, load the remote image
+        initialiseImageView()
     }
     
     func initialiseImageView() {
-        let fullImageURL = NSURL(string: self.imageURL)
+        let fullImageURL = NSURL(string: self.imageURL)!
+        
+        if(self.imageName.hasSuffix("gif")) {
+            self.imageView.needsPrescaling = false
+        }
         
         let options:KingfisherOptionsInfo = [
             .Transition(ImageTransition.Fade(0.25))
         ]
         
-        self.imageView.kf_setImageWithURL(fullImageURL!, placeholderImage: nil, optionsInfo: options,
+        self.imageView.kf_setImageWithURL(fullImageURL, placeholderImage: nil, optionsInfo: options,
             progressBlock: { (receivedSize, totalSize) -> () in
                 self.view.addSubview(self.progressBar)
                 let progress = Double(Float(receivedSize)/Float(totalSize))
@@ -99,7 +106,8 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
                 if(error === nil) {
                     self.showCopyingOptions()
                 } else {
-                    self.handleImageLoadingError()
+                    let err = error
+                    self.handleImageLoadingError(err!)
                 }
         })
     }
@@ -127,38 +135,40 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
-    func handleImageLoadingError() {
-        // If we don't have network connectivity, let the user know what's up
-        // Throw in our helpful label
+    func handleImageLoadingError(error: NSError) {
+        // If we run into an error, let the user back out
+        var message = "Hmm. Something went wrong."
+        var buttonText = "Bummer"
+        
+        // If the error is a network connectivity problem
+        if (error.code == -1009) {
+            message = "Unable to connect to network"
+            buttonText = "Well ok then"
+        }
+        
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 20
         stackView.axis = .Vertical
         
         let warningLabel = UILabel()
-        warningLabel.text = "Unable to connect to network."
+        warningLabel.text = message
         warningLabel.sizeToFit()
         warningLabel.textColor = UIColor.whiteColor()
+        warningLabel.textAlignment = .Center
         stackView.addArrangedSubview(warningLabel)
         
-        // Add entry animation for the label
-        let labelFromValue = warningLabel.frame.origin.y + 40
-        let labelToValue = warningLabel.frame.origin.y
-        let labelAnimation = makeAnimation(kPOPLayerPositionY, from: labelFromValue, to: labelToValue)
-        labelAnimation.beginTime = (CACurrentMediaTime() + 0.25)
-//        labelAnimation.springSpeed = 15
-        warningLabel.pop_addAnimation(labelAnimation, forKey: "labelEnterAnimation")
-        
         // Make a button to close the modal
-        let dismissButton = makeButton("Well ok then")
+        let dismissButton = makeButton(buttonText)
         stackView.addArrangedSubview(dismissButton)
         
         self.view.addSubview(stackView)
         
         let stackXConstraint = NSLayoutConstraint(item: stackView, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
         let stackYConstraint = NSLayoutConstraint(item: stackView, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1.0, constant: 0.0)
+        let stackWidthConstraint = NSLayoutConstraint(item: stackView, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 1.0, constant: -40)
         
-        self.view.addConstraints([stackXConstraint, stackYConstraint])
+        self.view.addConstraints([stackXConstraint, stackYConstraint, stackWidthConstraint])
         
         // Add entry animation for the button
         let stackFromValue = self.view.frame.height
@@ -170,7 +180,6 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         gestureRecogniser.delegate = self
         
         dismissButton.addGestureRecognizer(gestureRecogniser)
-
     }
     
     func showCopyingOptions() {
@@ -247,15 +256,5 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
