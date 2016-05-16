@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7183E6BC1CE953B7003E11AE /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183E6BB1CE953B7003E11AE /* Secrets.swift */; };
 		7193BD8C1CD1B83500269544 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193BD8B1CD1B83500269544 /* Reachability.swift */; };
 		7193BD8E1CD1BF2500269544 /* GifmeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193BD8D1CD1BF2500269544 /* GifmeButton.swift */; };
 		7193BD901CD1C68400269544 /* GifmeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7193BD8F1CD1C68400269544 /* GifmeCollectionViewCell.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		5952D58B4C7B5EEDBF1D3562 /* Pods-Gifme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gifme/Pods-Gifme.release.xcconfig"; sourceTree = "<group>"; };
+		7183E6BB1CE953B7003E11AE /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		7193BD8A1CD1833F00269544 /* GifmeBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifmeBridgingHeader.h; sourceTree = "<group>"; };
 		7193BD8B1CD1B83500269544 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		7193BD8D1CD1BF2500269544 /* GifmeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeButton.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				719F8DB91CDCA5FD004739F5 /* Kingfisher */,
 				71B89FE81CCD930400839C06 /* AppDelegate.swift */,
+				7183E6BB1CE953B7003E11AE /* Secrets.swift */,
 				7193BD8A1CD1833F00269544 /* GifmeBridgingHeader.h */,
 				71B89FEC1CCD930400839C06 /* Main.storyboard */,
 				71F39D181CCDBD4200CD934E /* GifmeImageViewController.swift */,
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71996D0F1CDF9B5400C93D92 /* Extensions.swift in Sources */,
+				7183E6BC1CE953B7003E11AE /* Secrets.swift in Sources */,
 				719F8DBC1CDCA5FD004739F5 /* ImageCache.swift in Sources */,
 				7193BD901CD1C68400269544 /* GifmeCollectionViewCell.swift in Sources */,
 				719F8DC21CDCA5FD004739F5 /* KingfisherOptionsInfo.swift in Sources */,

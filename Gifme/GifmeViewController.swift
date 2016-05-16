@@ -16,6 +16,11 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
     var imageArray:[String] = []
     var filteredImages:[String] = []
     
+    var dataLoadingFromAPI: Bool = false
+    var remoteData = [Dictionary<String,AnyObject>]()
+    // The offset to use when requesting the next batch of tag records from the API.
+    var dataNextOffset: String = ""
+    
     let searchBar:UISearchBar = UISearchBar()
     
     override func viewDidLoad() {
@@ -53,6 +58,8 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
             
             self.collectionView?.reloadData()
         }
+        
+        self.getDataFromAirtable()
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -111,6 +118,116 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
         self.searchBar.resignFirstResponder()
         
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func getDataFromAirtable() {
+        let tableName = "Tags"
+        let limit = "100"
+        
+        // If we are already loading data...
+        if dataLoadingFromAPI {
+            return
+        }
+        
+        
+        // Set "restaurantsLoading" flag to prevent multiple simultaneous requests.
+        dataLoadingFromAPI = true
+        
+        
+        // Prepare the URL request.
+        let url = "https://api.airtable.com/v0/\(AIRTABLE_APP_ID)/\(tableName)?limit=\(limit)"
+//        if viewName != "" {
+//            url = url + "&view=" + viewName.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+//        }
+//        if sortField != "" {
+//            url = url + "&sortField=" + sortField.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())!
+//            url = url + "&sortDirection=" + sortDirection
+//        }
+//        if offset != "" {
+//            url = url + "&offset=" + offset
+//        }
+        let urlRequest = NSMutableURLRequest(URL: NSURL(string: url)!)
+        
+        
+        // Specify the Authorization header.
+        urlRequest.addValue("Bearer \(AIRTABLE_API_KEY)", forHTTPHeaderField: "Authorization")
+        
+        
+        // Prepare an NSURLSession to send the data request.
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: config)
+        
+        
+        // Create the data task, along with a completion handler.
+        let task : NSURLSessionDataTask = session.dataTaskWithRequest(urlRequest, completionHandler: {(data, response, error) in
+            
+            // Catch general errors (such as unsupported URLs).
+            guard error == nil else {
+                print("Error")
+                print(error)
+                self.dataLoadingFromAPI = false
+                return
+            }
+            
+            // Catch HTTP errors (anything other than "200 OK").
+            let httpResponse: NSHTTPURLResponse = (response as? NSHTTPURLResponse)!
+            if httpResponse.statusCode != 200 {
+                print("HTTP Error")
+                print(httpResponse.statusCode)
+                self.dataLoadingFromAPI = false
+                return
+            }
+            
+            // Check to see that the response included data.
+            guard let responseData = data else {
+                print("Error: No data was found in the response.")
+                self.dataLoadingFromAPI = false
+                return
+            }
+            
+            // Try to serialize the data to JSON.
+            do {
+                
+                // Try to get the data in JSON format.
+                let jsonData = try NSJSONSerialization.JSONObjectWithData(responseData, options:[]) as! NSDictionary
+                
+                // Get the records from the JSON data.
+                if let recordsReceived = (jsonData["records"] as? [Dictionary<String,AnyObject>]) {
+                    
+                    // Append the records to the array.
+                    self.remoteData = self.remoteData + recordsReceived
+                    print(self.remoteData)
+                    
+                    // Reload the table.
+//                    dispatch_async(dispatch_get_main_queue(), {
+//                        self.restaurantsTable.reloadData()
+//                    })
+                    
+                } else {
+                    print("Error: No records received.")
+                }
+                
+                // Get the next offset from the JSON data.
+                if let offsetReceived = (jsonData["offset"] as? String) {
+                    self.dataNextOffset = offsetReceived
+                } else {
+                    self.dataNextOffset = ""
+                }
+                
+            } catch {
+                print("Error: Unable to convert data to JSON.")
+                return
+            }
+            
+            // Flip the restaurantsLoading flag.
+            self.dataLoadingFromAPI = false
+            
+            
+        })
+        
+        // Start / resume the data task.
+        task.resume()
+
     }
 
 }
