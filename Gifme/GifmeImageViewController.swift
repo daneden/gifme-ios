@@ -89,6 +89,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         if(self.imageName.hasSuffix("gif")) {
             self.imageView.needsPrescaling = false
+            self.imageView.framePreloadCount = 1
         }
         
         let options:KingfisherOptionsInfo = [
