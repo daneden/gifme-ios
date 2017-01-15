@@ -30,7 +30,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         self.activityIndicator.hidesWhenStopped = true
         
         // Set the view's background color
-        self.view.backgroundColor = UIColor.blackColor()
+        self.view.backgroundColor = UIColor.black
         
         // Make sure the URL is safely encoded
         self.imageURL = self.imageName.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLPathAllowedCharacterSet())!
@@ -40,9 +40,9 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         self.title = self.imageName
         
         // Create the progress bar view
-        self.progressBar.backgroundColor = UIApplication.sharedApplication().keyWindow?.tintColor
+        self.progressBar.backgroundColor = UIApplication.shared.keyWindow?.tintColor
         self.progressBarTop = (self.navigationController?.navigationBar.frame.size.height)! + (self.navigationController?.topLayoutGuide.length)!
-        UIApplication.sharedApplication().keyWindow!.addSubview(self.progressBar)
+        UIApplication.shared.keyWindow!.addSubview(self.progressBar)
         
         // Initialise the activity indicator
         initialiseViewWithActivityIndicator()
@@ -52,7 +52,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+        return UIStatusBarStyle.lightContent
     }
     
     func initialiseViewWithActivityIndicator() {
@@ -64,16 +64,16 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func initialiseViewWithImageView() {
-        self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.imageView.contentMode = UIViewContentMode.scaleAspectFit
         self.imageView.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(self.imageView)
         
-        let constraintEdges:[NSLayoutAttribute] = [.Top, .Right, .Bottom, .Left]
+        let constraintEdges:[NSLayoutAttribute] = [.top, .right, .bottom, .left]
         var constraints:[NSLayoutConstraint] = []
         
         for edge in constraintEdges {
-            let constraint = NSLayoutConstraint(item: self.imageView, attribute: edge, relatedBy: .Equal, toItem: self.view, attribute: edge, multiplier: 1.0, constant: 0.0)
+            let constraint = NSLayoutConstraint(item: self.imageView, attribute: edge, relatedBy: .equal, toItem: self.view, attribute: edge, multiplier: 1.0, constant: 0.0)
             constraints.append(constraint)
         }
         
@@ -116,13 +116,13 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     func updateProgress(progress: Double) {
         // progress is a percentage represented as a decimal range between 0 and 1
         if(progress==1) {
-            UIView.animateWithDuration(0.2, animations: {
+            UIView.animate(withDuration: 0.2, animations: {
                 // Animate the progress bar to completion
                 self.progressBar.frame = CGRectMake(0, self.progressBarTop, self.view.frame.width, 2)
                 }, completion: { (complete) in
                     // Wait 2 seconds then remove the progress bar
-                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2)), dispatch_get_main_queue(), { 
-                        UIView.animateWithDuration(0.2, animations: { 
+                    dispatch_after(DispatchTime.now(dispatch_time_t(DispatchTime.now()), Int64(2)), DispatchQueue.main, { 
+                        UIView.animate(withDuration: 0.2, animations: { 
                             self.progressBar.frame = CGRectMake(0, self.progressBarTop, self.view.frame.width, 0)
                             }, completion: { (complete) in
                                 self.progressBar.removeFromSuperview()
@@ -130,7 +130,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
                     })
             })
         } else {
-            UIView.animateWithDuration(0.2, animations: {
+            UIView.animate(withDuration: 0.2, animations: {
                 self.progressBar.frame = CGRectMake(0, self.progressBarTop, (self.view.frame.width * CGFloat(progress)), 2)
                 }, completion: nil)
         }
@@ -150,13 +150,13 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.spacing = 20
-        stackView.axis = .Vertical
+        stackView.axis = .vertical
         
         let warningLabel = UILabel()
         warningLabel.text = message
         warningLabel.sizeToFit()
-        warningLabel.textColor = UIColor.whiteColor()
-        warningLabel.textAlignment = .Center
+        warningLabel.textColor = UIColor.white
+        warningLabel.textAlignment = .center
         stackView.addArrangedSubview(warningLabel)
         
         // Make a button to close the modal
@@ -165,9 +165,9 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         self.view.addSubview(stackView)
         
-        let stackXConstraint = NSLayoutConstraint(item: stackView, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
-        let stackYConstraint = NSLayoutConstraint(item: stackView, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1.0, constant: 0.0)
-        let stackWidthConstraint = NSLayoutConstraint(item: stackView, attribute: .Width, relatedBy: .Equal, toItem: self.view, attribute: .Width, multiplier: 1.0, constant: -40)
+        let stackXConstraint = NSLayoutConstraint(item: stackView, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+        let stackYConstraint = NSLayoutConstraint(item: stackView, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+        let stackWidthConstraint = NSLayoutConstraint(item: stackView, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 1.0, constant: -40)
         
         self.view.addConstraints([stackXConstraint, stackYConstraint, stackWidthConstraint])
         
@@ -196,8 +196,8 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         self.view.addSubview(stackView)
         
-        let buttonXContraint = NSLayoutConstraint(item: stackView, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
-        let buttonYConstraint = NSLayoutConstraint(item: stackView, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -20.0)
+        let buttonXContraint = NSLayoutConstraint(item: stackView, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+        let buttonYConstraint = NSLayoutConstraint(item: stackView, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: -20.0)
         
         self.view.addConstraints([buttonXContraint, buttonYConstraint])
         
@@ -224,11 +224,11 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func dismissModal() {
-        navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewController(animated: true)
     }
     
     func copyImage() {
-        let pasteboard = UIPasteboard.generalPasteboard()
+        let pasteboard = UIPasteboard.general
         
         if(self.imageName.hasSuffix("gif")) {
             let imageData = self.imageView.image?.kf_animatedImageData
@@ -244,7 +244,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func copyURL() {
-        let pasteboard = UIPasteboard.generalPasteboard()
+        let pasteboard = UIPasteboard.general
         let imageURL = NSURL(string: "https://gif.daneden.me/\(self.imageName)")
         pasteboard.setValue(imageURL!, forPasteboardType: kUTTypeURL as String)
         var style = ToastStyle()

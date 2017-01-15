@@ -13,15 +13,15 @@ func makeAnimation(property: String, from: AnyObject?, to: AnyObject?) -> POPSpr
     let anim = POPSpringAnimation(propertyNamed: property)
     
     if(from != nil) {
-        anim.fromValue = from
+        anim?.fromValue = from
     }
     
     if(to != nil) {
-        anim.toValue = to
+        anim?.toValue = to
     }
     
-    anim.springSpeed = 10
-    anim.springBounciness = 6
+    anim?.springSpeed = 10
+    anim?.springBounciness = 6
     
-    return anim
+    return anim!
 }

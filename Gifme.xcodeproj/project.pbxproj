@@ -36,7 +36,7 @@
 		71CCC7C01CCD9B8100275B28 /* GifmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CCC7BF1CCD9B8100275B28 /* GifmeViewController.swift */; };
 		71F39D171CCDBB0000CD934E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F39D161CCDBB0000CD934E /* UIImage+Gif.swift */; };
 		71F39D191CCDBD4200CD934E /* GifmeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F39D181CCDBD4200CD934E /* GifmeImageViewController.swift */; };
-		C6472E519C5DC281E829465F /* Pods_Gifme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB74DB0FEB27336A5B798670 /* Pods_Gifme.framework */; };
+		CE6117639B77250AA372689B /* Pods_Gifme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B21B277922F71DEF4F8C71 /* Pods_Gifme.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5952D58B4C7B5EEDBF1D3562 /* Pods-Gifme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gifme/Pods-Gifme.release.xcconfig"; sourceTree = "<group>"; };
+		32B21B277922F71DEF4F8C71 /* Pods_Gifme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gifme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		619B9A8A3BD613761DACAFAE /* Pods-Gifme.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifme.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gifme/Pods-Gifme.release.xcconfig"; sourceTree = "<group>"; };
 		7193BD8A1CD1833F00269544 /* GifmeBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifmeBridgingHeader.h; sourceTree = "<group>"; };
 		7193BD8B1CD1B83500269544 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		7193BD8D1CD1BF2500269544 /* GifmeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeButton.swift; sourceTree = "<group>"; };
@@ -99,9 +100,8 @@
 		71CCC7BF1CCD9B8100275B28 /* GifmeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeViewController.swift; sourceTree = "<group>"; };
 		71F39D161CCDBB0000CD934E /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		71F39D181CCDBD4200CD934E /* GifmeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeImageViewController.swift; sourceTree = "<group>"; };
-		8DEC4A566ABA566CBE10B476 /* Pods-Gifme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gifme/Pods-Gifme.debug.xcconfig"; sourceTree = "<group>"; };
+		8924A1FC0880DDA686EEEF37 /* Pods-Gifme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gifme/Pods-Gifme.debug.xcconfig"; sourceTree = "<group>"; };
 		8FF070E3E991D784BDC86E26 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB74DB0FEB27336A5B798670 /* Pods_Gifme.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gifme.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6472E519C5DC281E829465F /* Pods_Gifme.framework in Frameworks */,
+				CE6117639B77250AA372689B /* Pods_Gifme.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,22 +130,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4548A9310D9554586E88C4B5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8DEC4A566ABA566CBE10B476 /* Pods-Gifme.debug.xcconfig */,
-				5952D58B4C7B5EEDBF1D3562 /* Pods-Gifme.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		6724A45BE3C4F643BE42BCF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8FF070E3E991D784BDC86E26 /* Pods.framework */,
-				CB74DB0FEB27336A5B798670 /* Pods_Gifme.framework */,
+				32B21B277922F71DEF4F8C71 /* Pods_Gifme.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FEF91A74F9B030C58C0CBDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8924A1FC0880DDA686EEEF37 /* Pods-Gifme.debug.xcconfig */,
+				619B9A8A3BD613761DACAFAE /* Pods-Gifme.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		719F8DB81CDCA5FD004739F5 /* Support Files */ = {
@@ -193,7 +193,7 @@
 				71B8A0071CCD930500839C06 /* GifmeUITests */,
 				71B89FE61CCD930400839C06 /* Products */,
 				6724A45BE3C4F643BE42BCF4 /* Frameworks */,
-				4548A9310D9554586E88C4B5 /* Pods */,
+				6FEF91A74F9B030C58C0CBDA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -254,13 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71B8A00D1CCD930500839C06 /* Build configuration list for PBXNativeTarget "Gifme" */;
 			buildPhases = (
-				88C3FBE955B70B490BDA846B /* 📦 Check Pods Manifest.lock */,
+				7B7B7F27CDA97ABF63B2680A /* [CP] Check Pods Manifest.lock */,
 				71B89FE11CCD930400839C06 /* Sources */,
 				71B89FE21CCD930400839C06 /* Frameworks */,
 				71B89FE31CCD930400839C06 /* Resources */,
-				05FF18E0AC8BC3CA451E0767 /* 📦 Embed Pods Frameworks */,
-				77695FA2A0D61740CB77C375 /* 📦 Copy Pods Resources */,
-				F47D201FD2E03121E2C82CBA /* Embed Pods Frameworks */,
+				4DDAE36BFF4AC918ECBEFA9E /* [CP] Embed Pods Frameworks */,
+				5FA222D7877A3EC318520461 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,13 +318,16 @@
 				TargetAttributes = {
 					71B89FE41CCD930400839C06 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 					};
 					71B89FF81CCD930500839C06 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = 71B89FE41CCD930400839C06;
 					};
 					71B8A0031CCD930500839C06 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = 71B89FE41CCD930400839C06;
 					};
 				};
@@ -379,14 +381,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05FF18E0AC8BC3CA451E0767 /* 📦 Embed Pods Frameworks */ = {
+		4DDAE36BFF4AC918ECBEFA9E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,14 +396,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gifme/Pods-Gifme-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		77695FA2A0D61740CB77C375 /* 📦 Copy Pods Resources */ = {
+		5FA222D7877A3EC318520461 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,34 +411,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gifme/Pods-Gifme-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		88C3FBE955B70B490BDA846B /* 📦 Check Pods Manifest.lock */ = {
+		7B7B7F27CDA97ABF63B2680A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F47D201FD2E03121E2C82CBA /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gifme/Pods-Gifme-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -610,7 +597,7 @@
 		};
 		71B8A00E1CCD930500839C06 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DEC4A566ABA566CBE10B476 /* Pods-Gifme.debug.xcconfig */;
+			baseConfigurationReference = 8924A1FC0880DDA686EEEF37 /* Pods-Gifme.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = YES;
@@ -619,13 +606,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.daneden.Gifme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = Gifme/GifmeBridgingHeader.h;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		71B8A00F1CCD930500839C06 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5952D58B4C7B5EEDBF1D3562 /* Pods-Gifme.release.xcconfig */;
+			baseConfigurationReference = 619B9A8A3BD613761DACAFAE /* Pods-Gifme.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = YES;
@@ -634,6 +622,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.daneden.Gifme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = Gifme/GifmeBridgingHeader.h;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -646,6 +635,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.daneden.GifmeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gifme.app/Gifme";
 			};
 			name = Debug;
@@ -658,6 +648,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.daneden.GifmeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gifme.app/Gifme";
 			};
 			name = Release;
@@ -669,6 +660,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.daneden.GifmeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Gifme;
 			};
 			name = Debug;
@@ -680,6 +672,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.daneden.GifmeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Gifme;
 			};
 			name = Release;

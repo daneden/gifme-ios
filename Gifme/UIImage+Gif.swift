@@ -30,7 +30,7 @@ extension UIImage {
         }
 
         // Validate data
-        guard let imageData = NSData(contentsOfURL: bundleURL!) else {
+        guard let imageData = NSData(contentsOf: bundleURL! as URL) else {
             print("SwiftGif: Cannot turn image named \"\(gifUrl)\" into NSData")
             return nil
         }
@@ -40,14 +40,14 @@ extension UIImage {
 
     public class func gifWithName(name: String) -> UIImage? {
         // Check for existance of gif
-        guard let bundleURL = NSBundle.mainBundle()
-          .URLForResource(name, withExtension: "gif") else {
+        guard let bundleURL = Bundle.main
+          .url(forResource: name, withExtension: "gif") else {
             print("SwiftGif: This image named \"\(name)\" does not exist")
             return nil
         }
 
         // Validate data
-        guard let imageData = NSData(contentsOfURL: bundleURL) else {
+        guard let imageData = NSData(contentsOf: bundleURL) else {
             print("SwiftGif: Cannot turn image named \"\(name)\" into NSData")
             return nil
         }
@@ -60,7 +60,7 @@ extension UIImage {
 
         // Get dictionaries
         let cfProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil)
-        let gifProperties: CFDictionaryRef = unsafeBitCast(
+        let gifProperties: CFDictionary = unsafeBitCast(
             CFDictionaryGetValue(cfProperties,
                 unsafeAddressOf(kCGImagePropertyGIFDictionary)),
             CFDictionary.self)
@@ -99,7 +99,7 @@ extension UIImage {
         }
 
         // Swap for modulo
-        if a < b {
+        if a! < b! {
             let c = a
             a = b
             b = c
@@ -135,7 +135,7 @@ extension UIImage {
 
     class func animatedImageWithSource(source: CGImageSource) -> UIImage? {
         let count = CGImageSourceGetCount(source)
-        var images = [CGImageRef]()
+        var images = [CGImage]()
         var delays = [Int]()
 
         // Fill arrays
@@ -169,7 +169,7 @@ extension UIImage {
         var frame: UIImage
         var frameCount: Int
         for i in 0..<count {
-            frame = UIImage(CGImage: images[Int(i)])
+            frame = UIImage(cgImage: images[Int(i)])
             frameCount = Int(delays[Int(i)] / gcd)
 
             for _ in 0..<frameCount {
@@ -178,7 +178,7 @@ extension UIImage {
         }
 
         // Heyhey
-        let animation = UIImage.animatedImageWithImages(frames,
+        let animation = UIImage.animatedImage(with: frames,
             duration: Double(duration) / 1000.0)
 
         return animation

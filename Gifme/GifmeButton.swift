@@ -19,9 +19,9 @@ class GifmeButton: UIButton {
     }
     */
     
-    override var highlighted: Bool {
+    override var isHighlighted: Bool {
         didSet {
-            if (highlighted) {
+            if (isHighlighted) {
                 self.alpha = 0.5
             } else {
                 self.alpha = 1
@@ -31,12 +31,12 @@ class GifmeButton: UIButton {
 }
 
 func makeButton(label: String) -> GifmeButton {
-    let button = GifmeButton(type: .Custom)
+    let button = GifmeButton(type: .custom)
     
-    button.setTitle("\(label)", forState: .Normal)
+    button.setTitle("\(label)", for: .normal)
     
-    button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-    button.backgroundColor = UIApplication.sharedApplication().keyWindow?.tintColor
+    button.setTitleColor(UIColor.white, for: .normal)
+    button.backgroundColor = UIApplication.shared.keyWindow?.tintColor
     button.contentEdgeInsets = UIEdgeInsets(top: 9, left: 20, bottom: 10, right: 20)
     
     button.sizeToFit()

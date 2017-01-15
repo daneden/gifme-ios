@@ -10,14 +10,14 @@ import UIKit
 import pop
 
 class GifmeCollectionViewCell: UICollectionViewCell {
-    override var highlighted: Bool {
+    override var isHighlighted: Bool {
         didSet {
-            if (highlighted) {
-                UIView.animateWithDuration(0.2, animations: {
+            if (isHighlighted) {
+                UIView.animate(withDuration: 0.2, animations: {
                     self.alpha = 0.5
                 })
             } else {
-                UIView.animateWithDuration(0.2, animations: {
+                UIView.animate(withDuration: 0.2, animations: {
                     self.alpha = 1
                 })
             }

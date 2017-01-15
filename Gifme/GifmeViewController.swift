@@ -24,10 +24,10 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
         let searchBar = self.searchBar
         searchBar.delegate = self
         searchBar.sizeToFit()
-        searchBar.barStyle = .Black
+        searchBar.barStyle = .black
         searchBar.placeholder = "Search gif.daneden.me"
-        searchBar.autocapitalizationType = .None
-        searchBar.keyboardAppearance = .Dark
+        searchBar.autocapitalizationType = .none
+        searchBar.keyboardAppearance = .dark
         navigationItem.titleView = searchBar
         
         let cache = Shared.JSONCache
@@ -60,7 +60,7 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseID, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseID, for: indexPath as IndexPath)
     
         let stringURL = self.filteredImages[indexPath.row].stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLPathAllowedCharacterSet())
         
@@ -70,7 +70,7 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
         
         imageView.kf_setImageWithURL(imageURL!, placeholderImage: placeholderImage)
         
-        imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        imageView.contentMode = UIViewContentMode.scaleAspectFill
         cell.backgroundView = imageView
         cell.contentView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -82,7 +82,7 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
             self.filteredImages = self.imageArray
         } else {
             self.filteredImages = self.imageArray.filter({( name: String) -> Bool in
-                let stringMatch = name.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+                let stringMatch = name.rangeOfString(searchText, options: NSString.CompareOptions.CaseInsensitiveSearch)
                 return (stringMatch != nil)
             })
         }

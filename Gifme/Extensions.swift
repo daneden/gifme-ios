@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension CollectionType {
+extension Collection {
     /// Return a copy of `self` with its elements shuffled
     func shuffle() -> [Generator.Element] {
         var list = Array(self)
@@ -17,7 +17,7 @@ extension CollectionType {
     }
 }
 
-extension MutableCollectionType where Index == Int {
+extension MutableCollection where Index == Int {
     /// Shuffle the elements of `self` in-place.
     mutating func shuffleInPlace() {
         // empty and single-element collections don't shuffle
