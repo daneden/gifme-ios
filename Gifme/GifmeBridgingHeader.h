@@ -9,6 +9,6 @@
 #ifndef GifmeBridgingHeader_h
 #define GifmeBridgingHeader_h
 
-#import <POP/POP.h>
+//#import <pop/POP.h>
 
 #endif /* GifmeBridgingHeader_h */
