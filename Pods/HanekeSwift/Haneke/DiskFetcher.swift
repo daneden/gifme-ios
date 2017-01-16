@@ -34,9 +34,10 @@ open class DiskFetcher<T : DataConvertible> : Fetcher<T> {
     
     // MARK: Fetcher
     
-    open override func fetch(failure fail: @escaping ((NSError?) -> ()), success succeed: @escaping (T.Result) -> ()) {
+    
+    open override func fetch(failure fail: @escaping ((Error?) -> ()), success succeed: @escaping (T.Result) -> ()) {
         self.cancelled = false
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: { [weak self] in
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async(execute: { [weak self] in
             if let strongSelf = self {
                 strongSelf.privateFetch(failure: fail, success: succeed)
             }
@@ -49,20 +50,20 @@ open class DiskFetcher<T : DataConvertible> : Fetcher<T> {
     
     // MARK: Private
     
-    fileprivate func privateFetch(failure fail: @escaping ((NSError?) -> ()), success succeed: @escaping (T.Result) -> ()) {
+    fileprivate func privateFetch(failure fail: @escaping ((Error?) -> ()), success succeed: @escaping (T.Result) -> ()) {
         if self.cancelled {
             return
         }
         
         let data : Data
         do {
-            data = try Data(contentsOf: URL(fileURLWithPath: self.path), options: NSData.ReadingOptions())
+            data = try Data(contentsOf: URL(fileURLWithPath: self.path), options: Data.ReadingOptions())
         } catch {
             DispatchQueue.main.async {
                 if self.cancelled {
                     return
                 }
-                fail(error as NSError)
+                fail(error)
             }
             return
         }

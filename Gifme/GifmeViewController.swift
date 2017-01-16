@@ -8,6 +8,7 @@
 
 import UIKit
 import Haneke
+import ReachabilitySwift
 
 class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
 
@@ -31,14 +32,14 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
         navigationItem.titleView = searchBar
         
         let cache = Shared.JSONCache
-        let URL = NSURL(string: "https://gif.daneden.me/api/v0/all")!
+        let url = URL(string: "https://gif.daneden.me/api/v0/all")!
         
         // Make sure we always get a fresh copy of the JSON if we're online
-        if(Reachability.connectedToNetwork()) {
+        if((Reachability.init()) != nil) {
             cache.remove(key: "https://gif.daneden.me/api/v0/all")
         }
         
-        cache.fetch(URL: URL).onSuccess { JSON in
+        cache.fetch(URL: url).onSuccess { JSON in
             let imageNames: [String] = (JSON.dictionary?["images"])! as! [String]
             
             self.imageArray = []
@@ -55,20 +56,35 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
         }
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout
+        collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1.0
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.filteredImages.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseID, for: indexPath as IndexPath)
-    
-        let stringURL = self.filteredImages[indexPath.row].stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLPathAllowedCharacterSet())
         
-        let imageURL = NSURL(string: "https://degif.imgix.net/\(stringURL!)?fm=jpg&auto=compress&w=248")
+        let w = (self.view.frame.width / 3) - 1.0
+        cell.frame.size = CGSize(width: w, height: w)
+    
+        let stringURL = self.filteredImages[indexPath.row].addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlPathAllowed)
+        
+        let imageURL = URL(string: "https://degif.imgix.net/\(stringURL!)?fm=jpg&auto=compress&w=248")
         let imageView = UIImageView()
         let placeholderImage = UIImage(named: "placeholder")
         
-        imageView.kf_setImageWithURL(imageURL!, placeholderImage: placeholderImage)
+        imageView.kf.setImage(with: imageURL!, placeholder: placeholderImage)
         
         imageView.contentMode = UIViewContentMode.scaleAspectFill
         cell.backgroundView = imageView
@@ -77,12 +93,12 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
         return cell
     }
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if(searchBar.text?.isEmpty == true) {
             self.filteredImages = self.imageArray
         } else {
             self.filteredImages = self.imageArray.filter({( name: String) -> Bool in
-                let stringMatch = name.rangeOfString(searchText, options: NSString.CompareOptions.CaseInsensitiveSearch)
+                let stringMatch = name.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
                 return (stringMatch != nil)
             })
         }
@@ -90,19 +106,11 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
         self.collectionView?.reloadData()
     }
     
-    override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.searchBar.resignFirstResponder()
     }
     
-    func collectionView(collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                               sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        
-        let width = (self.view.frame.width / 3) - 1
-        return CGSize(width: width, height: width)
-    }
-    
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let imageName = self.filteredImages[indexPath.row]
         let viewController = GifmeImageViewController()
         

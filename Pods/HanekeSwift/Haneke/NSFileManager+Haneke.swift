@@ -10,7 +10,7 @@ import Foundation
 
 extension FileManager {
 
-    func enumerateContentsOfDirectoryAtPath(_ path: String, orderedByProperty property: String, ascending: Bool, usingBlock block: (URL, Int, inout Bool) -> Void ) {
+    func enumerateContentsOfDirectory(atPath path: String, orderedByProperty property: String, ascending: Bool, usingBlock block: (URL, Int, inout Bool) -> Void ) {
 
         let directoryURL = URL(fileURLWithPath: path)
         do {
@@ -21,13 +21,13 @@ extension FileManager {
                 
                 var value1 : AnyObject?
                 do {
-                    try (URL1 as NSURL).getResourceValue(&value1, forKey: URLResourceKey(rawValue: property));
+                    try (URL1 as NSURL).getResourceValue(&value1, forKey: URLResourceKey(rawValue: property))
                 } catch {
                     return true
                 }
                 var value2 : AnyObject?
                 do {
-                    try (URL2 as NSURL).getResourceValue(&value2, forKey: URLResourceKey(rawValue: property));
+                    try (URL2 as NSURL).getResourceValue(&value2, forKey: URLResourceKey(rawValue: property))
                 } catch {
                     return false
                 }
@@ -54,14 +54,10 @@ extension FileManager {
             }
 
         } catch {
-            Log.error("Failed to list directory", error as NSError)
+            Log.error(message: "Failed to list directory", error: error)
         }
     }
 
-}
-
-func < (lhs: Date, rhs: Date) -> Bool {
-    return lhs.compare(rhs) == ComparisonResult.orderedAscending
 }
 
 func < (lhs: NSNumber, rhs: NSNumber) -> Bool {

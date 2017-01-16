@@ -11,8 +11,13 @@ import pop
 import AVKit
 import MobileCoreServices
 import Toast_Swift
+import Kingfisher
 
 class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
     
@@ -33,7 +38,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         self.view.backgroundColor = UIColor.black
         
         // Make sure the URL is safely encoded
-        self.imageURL = self.imageName.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLPathAllowedCharacterSet())!
+        self.imageURL = self.imageName.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlPathAllowed)!
         self.imageURL = "https://gif.daneden.me/" + self.imageURL
         
         // Set the image name and view title
@@ -49,10 +54,6 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         // Initialise the image view
         initialiseViewWithImageView()
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
     }
     
     func initialiseViewWithActivityIndicator() {
@@ -85,7 +86,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func initialiseImageView() {
-        let fullImageURL = NSURL(string: self.imageURL)!
+        let fullImageURL = URL(string: self.imageURL)!
         
         if(self.imageName.hasSuffix("gif")) {
             self.imageView.needsPrescaling = false
@@ -93,22 +94,22 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         
         let options:KingfisherOptionsInfo = [
-            .Transition(ImageTransition.Fade(0.25))
+            .transition(ImageTransition.fade(0.25))
         ]
         
-        self.imageView.kf_setImageWithURL(fullImageURL, placeholderImage: nil, optionsInfo: options,
+        self.imageView.kf.setImage(with: fullImageURL, placeholder: nil, options: options,
             progressBlock: { (receivedSize, totalSize) -> () in
                 self.view.addSubview(self.progressBar)
                 let progress = Double(Float(receivedSize)/Float(totalSize))
-                self.updateProgress(progress)
+                self.updateProgress(progress: progress)
             },
             completionHandler: { (image, error, cacheType, imageURL) -> () in
                 self.activityIndicator.stopAnimating()
+                self.activityIndicator.removeFromSuperview()
                 if(error === nil) {
                     self.showCopyingOptions()
                 } else {
-                    let err = error
-                    self.handleImageLoadingError(err!)
+                    self.handleImageLoadingError(error: error!)
                 }
         })
     }
@@ -118,20 +119,21 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         if(progress==1) {
             UIView.animate(withDuration: 0.2, animations: {
                 // Animate the progress bar to completion
-                self.progressBar.frame = CGRectMake(0, self.progressBarTop, self.view.frame.width, 2)
+                self.progressBar.frame = CGRect(x: 0, y: self.progressBarTop, width: self.view.frame.width, height: 2)
                 }, completion: { (complete) in
                     // Wait 2 seconds then remove the progress bar
-                    dispatch_after(DispatchTime.now(dispatch_time_t(DispatchTime.now()), Int64(2)), DispatchQueue.main, { 
+                    let when = DispatchTime.now() + 2
+                    DispatchQueue.main.asyncAfter(deadline: when) {
                         UIView.animate(withDuration: 0.2, animations: { 
-                            self.progressBar.frame = CGRectMake(0, self.progressBarTop, self.view.frame.width, 0)
+                            self.progressBar.frame = CGRect(x: 0, y: self.progressBarTop, width: self.view.frame.width, height: 0)
                             }, completion: { (complete) in
                                 self.progressBar.removeFromSuperview()
                         })
-                    })
+                    }
             })
         } else {
             UIView.animate(withDuration: 0.2, animations: {
-                self.progressBar.frame = CGRectMake(0, self.progressBarTop, (self.view.frame.width * CGFloat(progress)), 2)
+                self.progressBar.frame = CGRect(x: 0, y: self.progressBarTop, width: (self.view.frame.width * CGFloat(progress)), height: 2)
                 }, completion: nil)
         }
     }
@@ -160,7 +162,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         stackView.addArrangedSubview(warningLabel)
         
         // Make a button to close the modal
-        let dismissButton = makeButton(buttonText)
+        let dismissButton = makeButton(label: buttonText)
         stackView.addArrangedSubview(dismissButton)
         
         self.view.addSubview(stackView)
@@ -173,8 +175,8 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         // Add entry animation for the button
         let stackFromValue = self.view.frame.height
-        let stackAnimation = makeAnimation(kPOPLayoutConstraintConstant, from: stackFromValue, to: 0)
-        stackYConstraint.pop_addAnimation(stackAnimation, forKey: "stackEnterAnimation")
+        let stackAnimation = makeAnimation(property: kPOPLayoutConstraintConstant, from: stackFromValue as AnyObject?, to: 0 as AnyObject?)
+        stackYConstraint.pop_add(stackAnimation, forKey: "stackEnterAnimation")
         
         // Add a gesture recogniser to the button
         let gestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(dismissModal))
@@ -185,8 +187,8 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func showCopyingOptions() {
         // Make a button to close the modal
-        let copyImageButton = makeButton("Copy image")
-        let copyLinkButton = makeButton("Copy link")
+        let copyImageButton = makeButton(label: "Copy image")
+        let copyLinkButton = makeButton(label: "Copy link")
         
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -212,15 +214,15 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         copyLinkButton.addGestureRecognizer(copyLinkGestureRecogniser)
         
-        let animationA = makeAnimation(kPOPLayerTranslationY, from: 500, to: 0)
-        let animationB = makeAnimation(kPOPLayerTranslationY, from: 500, to: 0)
-        animationB.beginTime = copyLinkButton.layer.convertTime(CACurrentMediaTime(), fromLayer: nil)+0.05
+        let animationA = makeAnimation(property: kPOPLayerTranslationY, from: 500 as AnyObject?, to: 0 as AnyObject?)
+        let animationB = makeAnimation(property: kPOPLayerTranslationY, from: 500 as AnyObject?, to: 0 as AnyObject?)
+        animationB.beginTime = copyLinkButton.layer.convertTime(CACurrentMediaTime(), from: nil)+0.05
         
         copyImageButton.layer.transform = CATransform3DMakeTranslation(0, 500, 0)
         copyLinkButton.layer.transform = CATransform3DMakeTranslation(0, 500, 0)
         
-        copyImageButton.layer.pop_addAnimation(animationA, forKey: "copyImageButtonAnimation")
-        copyLinkButton.layer.pop_addAnimation(animationB, forKey: "copyLinkButtonAnimation")
+        copyImageButton.layer.pop_add(animationA, forKey: "copyImageButtonAnimation")
+        copyLinkButton.layer.pop_add(animationB, forKey: "copyLinkButtonAnimation")
     }
     
     func dismissModal() {
@@ -231,7 +233,8 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         let pasteboard = UIPasteboard.general
         
         if(self.imageName.hasSuffix("gif")) {
-            let imageData = self.imageView.image?.kf_animatedImageData
+//            let imageData = self.imageView.image?.kf.animatedImageData
+            let imageData = self.imageView.image?.asData()
             pasteboard.setData(imageData!, forPasteboardType: kUTTypeGIF as String)
         } else {
             pasteboard.image = self.imageView.image
@@ -240,7 +243,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         var style = ToastStyle()
         style.horizontalPadding = 16
         style.cornerRadius = 20
-        self.view.makeToast("📸 Image copied to clipboard! 🎉", duration: 2.0, position: .Center, style: style)
+        self.view.makeToast("📸 Image copied to clipboard! 🎉", duration: 2.0, position: .center, style: style)
     }
     
     func copyURL() {
@@ -250,7 +253,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         var style = ToastStyle()
         style.horizontalPadding = 16
         style.cornerRadius = 20
-        self.view.makeToast("🔗 Link copied to clipboard! 🎉", duration: 2.0, position: .Center, style: style)
+        self.view.makeToast("🔗 Link copied to clipboard! 🎉", duration: 2.0, position: .center, style: style)
     }
 
     override func didReceiveMemoryWarning() {

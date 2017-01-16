@@ -10,7 +10,7 @@ import Foundation
 
 extension URLResponse {
     
-    func hnk_validateLengthOfData(_ data: Data) -> Bool {
+    func hnk_validateLength(ofData data: Data) -> Bool {
         let expectedContentLength = self.expectedContentLength
         if (expectedContentLength > -1) {
             let dataLength = data.count

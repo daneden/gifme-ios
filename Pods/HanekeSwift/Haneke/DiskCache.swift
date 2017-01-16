@@ -50,38 +50,38 @@ open class DiskCache {
             if let data = getData() {
                 self.setDataSync(data, key: key)
             } else {
-                Log.error("Failed to get data for key \(key)")
+                Log.error(message: "Failed to get data for key \(key)")
             }
         })
     }
     
-    open func fetchData(key: String, failure fail: ((NSError?) -> ())? = nil, success succeed: @escaping (Data) -> ()) {
+    @discardableResult open func fetchData(key: String, failure fail: ((Error?) -> ())? = nil, success succeed: @escaping (Data) -> ()) {
         cacheQueue.async {
-            let path = self.pathForKey(key)
+            let path = self.path(forKey: key)
             do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: NSData.ReadingOptions())
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: Data.ReadingOptions())
                 DispatchQueue.main.async {
                     succeed(data)
                 }
-                self.updateDiskAccessDateAtPath(path)
+                self.updateDiskAccessDate(atPath: path)
             } catch {
                 if let block = fail {
                     DispatchQueue.main.async {
-                        block(error as NSError)
+                        block(error)
                     }
                 }
             }
         }
     }
 
-    open func removeData(_ key: String) {
+    open func removeData(with key: String) {
         cacheQueue.async(execute: {
-            let path = self.pathForKey(key)
-            self.removeFileAtPath(path)
+            let path = self.path(forKey: key)
+            self.removeFile(atPath: path)
         })
     }
     
-    open func removeAllData() {
+    open func removeAllData(_ completion: (() -> ())? = nil) {
         let fileManager = FileManager.default
         let cachePath = self.path
         cacheQueue.async(execute: {
@@ -92,31 +92,36 @@ open class DiskCache {
                     do {
                         try fileManager.removeItem(atPath: path)
                     } catch {
-                        Log.error("Failed to remove path \(path)", error as NSError)
+                        Log.error(message: "Failed to remove path \(path)", error: error)
                     }
                 }
                 self.calculateSize()
             } catch {
-                Log.error("Failed to list directory", error as NSError)
+                Log.error(message: "Failed to list directory", error: error)
+            }
+            if let completion = completion {
+                DispatchQueue.main.async {
+                    completion()
+                }
             }
         })
     }
 
     open func updateAccessDate( _ getData: @autoclosure @escaping () -> Data?, key: String) {
         cacheQueue.async(execute: {
-            let path = self.pathForKey(key)
+            let path = self.path(forKey: key)
             let fileManager = FileManager.default
-            if (!(fileManager.fileExists(atPath: path) && self.updateDiskAccessDateAtPath(path))){
+            if (!(fileManager.fileExists(atPath: path) && self.updateDiskAccessDate(atPath: path))){
                 if let data = getData() {
                     self.setDataSync(data, key: key)
                 } else {
-                    Log.error("Failed to get data for key \(key)")
+                    Log.error(message: "Failed to get data for key \(key)")
                 }
             }
         })
     }
 
-    open func pathForKey(_ key: String) -> String {
+    open func path(forKey key: String) -> String {
         let escapedFilename = key.escapedFilename()
         let filename = escapedFilename.characters.count < Int(NAME_MAX) ? escapedFilename : key.MD5Filename()
         let keyPath = (self.path as NSString).appendingPathComponent(filename)
@@ -134,15 +139,17 @@ open class DiskCache {
             for pathComponent in contents {
                 let path = (cachePath as NSString).appendingPathComponent(pathComponent)
                 do {
-                    let attributes : NSDictionary = try fileManager.attributesOfItem(atPath: path) as NSDictionary
-                    size += attributes.fileSize()
+                    let attributes: [FileAttributeKey: Any] = try fileManager.attributesOfItem(atPath: path)
+                    if let fileSize = attributes[FileAttributeKey.size] as? UInt64 {
+                        size += fileSize
+                    }
                 } catch {
-                    Log.error("Failed to read file size of \(path)", error as NSError)
+                    Log.error(message: "Failed to list directory", error: error)
                 }
             }
-
+            
         } catch {
-            Log.error("Failed to list directory", error as NSError)
+            Log.error(message: "Failed to list directory", error: error)
         }
     }
     
@@ -151,71 +158,80 @@ open class DiskCache {
         
         let fileManager = FileManager.default
         let cachePath = self.path
-        fileManager.enumerateContentsOfDirectoryAtPath(cachePath, orderedByProperty: URLResourceKey.contentModificationDateKey, ascending: true) { (URL : Foundation.URL, _, stop : inout Bool) -> Void in
+        fileManager.enumerateContentsOfDirectory(atPath: cachePath, orderedByProperty: URLResourceKey.contentModificationDateKey.rawValue, ascending: true) { (URL : URL, _, stop : inout Bool) -> Void in
             
-            if let path = URL.path {
-                self.removeFileAtPath(path)
+            self.removeFile(atPath: URL.path)
 
-                stop = self.size <= self.capacity
-            }
+            stop = self.size <= self.capacity
         }
     }
     
     fileprivate func setDataSync(_ data: Data, key: String) {
-        let path = self.pathForKey(key)
+        let path = self.path(forKey: key)
         let fileManager = FileManager.default
-        let previousAttributes : NSDictionary? = try! fileManager.attributesOfItem(atPath: path) as NSDictionary?
+        let previousAttributes : [FileAttributeKey: Any]? = try? fileManager.attributesOfItem(atPath: path)
         
         do {
-            try data.write(to: URL(fileURLWithPath: path), options: NSData.WritingOptions.atomicWrite)
+            try data.write(to: URL(fileURLWithPath: path), options: Data.WritingOptions.atomicWrite)
         } catch {
-            Log.error("Failed to write key \(key)", error as NSError)
+            Log.error(message: "Failed to write key \(key)", error: error)
         }
         
         if let attributes = previousAttributes {
-            self.size -= attributes.fileSize()
+            if let fileSize = attributes[FileAttributeKey.size] as? UInt64 {
+                substract(size: fileSize)
+            }
         }
         self.size += UInt64(data.count)
         self.controlCapacity()
     }
     
-    fileprivate func updateDiskAccessDateAtPath(_ path: String) -> Bool {
+    @discardableResult fileprivate func updateDiskAccessDate(atPath path: String) -> Bool {
         let fileManager = FileManager.default
         let now = Date()
         do {
             try fileManager.setAttributes([FileAttributeKey.modificationDate : now], ofItemAtPath: path)
             return true
         } catch {
-            Log.error("Failed to update access date", error as NSError)
+            Log.error(message: "Failed to update access date", error: error)
             return false
         }
     }
     
-    fileprivate func removeFileAtPath(_ path: String) {
+    fileprivate func removeFile(atPath path: String) {
         let fileManager = FileManager.default
         do {
-            let attributes : NSDictionary =  try fileManager.attributesOfItem(atPath: path) as NSDictionary
-            let fileSize = attributes.fileSize()
+            let attributes: [FileAttributeKey: Any] = try fileManager.attributesOfItem(atPath: path)
             do {
                 try fileManager.removeItem(atPath: path)
-                self.size -= fileSize
+                if let fileSize = attributes[FileAttributeKey.size] as? UInt64 {
+                    substract(size: fileSize)
+                }
             } catch {
-                Log.error("Failed to remove file", error as NSError)
+                Log.error(message: "Failed to remove file", error: error)
             }
         } catch {
-            let castedError = error as NSError
-            if isNoSuchFileError(castedError) {
-                Log.debug("File not found", castedError)
+            if isNoSuchFileError(error) {
+                Log.debug(message: "File not found", error: error)
             } else {
-                Log.error("Failed to remove file", castedError)
+                Log.error(message: "Failed to remove file", error: error)
             }
+        }
+    }
+
+    fileprivate func substract(size : UInt64) {
+        if (self.size >= size) {
+            self.size -= size
+        } else {
+            Log.error(message: "Disk cache size (\(self.size)) is smaller than size to substract (\(size))")
+            self.size = 0
         }
     }
 }
 
-private func isNoSuchFileError(_ error : NSError?) -> Bool {
+private func isNoSuchFileError(_ error : Error?) -> Bool {
     if let error = error {
-        return NSCocoaErrorDomain == error.domain && error.code == NSFileReadNoSuchFileError
+        return NSCocoaErrorDomain == (error as NSError).domain && (error as NSError).code == NSFileReadNoSuchFileError
     }
     return false
 }

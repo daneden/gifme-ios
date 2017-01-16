@@ -10,17 +10,17 @@ import UIKit
 
 extension UIImage {
 
-    func hnk_imageByScalingToSize(_ toSize: CGSize) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(toSize, !hnk_hasAlpha(), 0.0)
-        draw(in: CGRect(x: 0, y: 0, width: toSize.width, height: toSize.height))
+    func hnk_imageByScaling(toSize size: CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, !hnk_hasAlpha(), 0.0)
+        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return resizedImage!
     }
 
     func hnk_hasAlpha() -> Bool {
-        let alpha = self.cgImage?.alphaInfo
-        switch alpha {
+        guard let alphaInfo = self.cgImage?.alphaInfo else { return false }
+        switch alphaInfo {
         case .first, .last, .premultipliedFirst, .premultipliedLast, .alphaOnly:
             return true
         case .none, .noneSkipFirst, .noneSkipLast:
@@ -37,11 +37,11 @@ extension UIImage {
     func hnk_decompressedImage() -> UIImage! {
         let originalImageRef = self.cgImage
         let originalBitmapInfo = originalImageRef?.bitmapInfo
-        let alphaInfo = originalImageRef?.alphaInfo
+        guard let alphaInfo = originalImageRef?.alphaInfo else { return UIImage() }
         
         // See: http://stackoverflow.com/questions/23723564/which-cgimagealphainfo-should-we-use
         var bitmapInfo = originalBitmapInfo
-        switch (alphaInfo) {
+        switch alphaInfo {
         case .none:
             let rawBitmapInfoWithoutAlpha = (bitmapInfo?.rawValue)! & ~CGBitmapInfo.alphaInfoMask.rawValue
             let rawBitmapInfo = rawBitmapInfoWithoutAlpha | CGImageAlphaInfo.noneSkipFirst.rawValue

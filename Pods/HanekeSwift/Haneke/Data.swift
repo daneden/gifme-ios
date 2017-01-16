@@ -29,7 +29,7 @@ extension UIImage : DataConvertible, DataRepresentable {
     // HACK: UIImage data initializer is no longer thread safe. See: https://github.com/AFNetworking/AFNetworking/issues/2572#issuecomment-115854482
     static func safeImageWithData(_ data:Data) -> Result? {
         imageSync.lock()
-        let image = UIImage(data:data)
+        let image = UIImage(data:data, scale: scale)
         imageSync.unlock()
         return image
     }
@@ -42,6 +42,8 @@ extension UIImage : DataConvertible, DataRepresentable {
     public func asData() -> Data! {
         return self.hnk_data() as Data!
     }
+    
+    fileprivate static let scale = UIScreen.main.scale
     
 }
 
@@ -82,7 +84,7 @@ public enum JSON : DataConvertible, DataRepresentable {
     
     public static func convertFromData(_ data: Data) -> Result? {
         do {
-            let object : AnyObject = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
+            let object : Any = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
             switch (object) {
             case let dictionary as [String:AnyObject]:
                 return JSON.Dictionary(dictionary)
@@ -92,7 +94,7 @@ public enum JSON : DataConvertible, DataRepresentable {
                 return nil
             }
         } catch {
-            Log.error("Invalid JSON data", error as NSError)
+            Log.error(message: "Invalid JSON data", error: error)
             return nil
         }
     }
