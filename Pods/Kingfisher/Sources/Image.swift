@@ -199,7 +199,7 @@ extension Kingfisher where Base: Image {
     }
     
     // MARK: - GIF
-    func gifRepresentation() -> Data? {
+    public func gifRepresentation() -> Data? {
         #if os(macOS)
             return gifRepresentation(duration: 0.0, repeatCount: 0)
         #else

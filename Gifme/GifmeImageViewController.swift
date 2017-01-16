@@ -234,7 +234,8 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
         
         if(self.imageName.hasSuffix("gif")) {
 //            let imageData = self.imageView.image?.kf.animatedImageData
-            let imageData = self.imageView.image?.asData()
+            let image = self.imageView.image
+            let imageData = image!.kf.gifRepresentation()
             pasteboard.setData(imageData!, forPasteboardType: kUTTypeGIF as String)
         } else {
             pasteboard.image = self.imageView.image
