@@ -62,7 +62,7 @@
 		71C03A011CDCCC3C005A9EF0 /* GifmeSpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeSpringAnimation.swift; sourceTree = "<group>"; };
 		71CCC7BF1CCD9B8100275B28 /* GifmeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeViewController.swift; sourceTree = "<group>"; };
 		71F39D161CCDBB0000CD934E /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
-		71F39D181CCDBD4200CD934E /* GifmeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifmeImageViewController.swift; sourceTree = "<group>"; };
+		71F39D181CCDBD4200CD934E /* GifmeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = GifmeImageViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		8924A1FC0880DDA686EEEF37 /* Pods-Gifme.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gifme.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gifme/Pods-Gifme.debug.xcconfig"; sourceTree = "<group>"; };
 		8FF070E3E991D784BDC86E26 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */

@@ -58,7 +58,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func initialiseViewWithActivityIndicator() {
         self.activityIndicator.center = self.view.center
-        
+        self.activityIndicator.activityIndicatorViewStyle = .whiteLarge
         self.activityIndicator.startAnimating()
         
         self.view.addSubview(activityIndicator)
@@ -226,7 +226,7 @@ class GifmeImageViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func dismissModal() {
-        navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     func copyImage() {

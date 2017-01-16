@@ -10,7 +10,7 @@ import UIKit
 import Haneke
 import ReachabilitySwift
 
-class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
+class GifmeViewController: UICollectionViewController, UISearchBarDelegate, UICollectionViewDelegateFlowLayout {
 
     private let reuseID = "gifmeImageCell"
     
@@ -58,6 +58,16 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellsAcross: CGFloat = 4
+        let spaceBetweenCells: CGFloat = 1
+        let dim = (self.view.frame.width - (cellsAcross - 1) * spaceBetweenCells) / cellsAcross
+        return CGSize(width: dim, height: dim)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1.0
     }
@@ -74,9 +84,6 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseID, for: indexPath as IndexPath)
-        
-        let w = (self.view.frame.width / 3) - 1.0
-        cell.frame.size = CGSize(width: w, height: w)
     
         let stringURL = self.filteredImages[indexPath.row].addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlPathAllowed)
         
@@ -85,8 +92,8 @@ class GifmeViewController: UICollectionViewController, UISearchBarDelegate {
         let placeholderImage = UIImage(named: "placeholder")
         
         imageView.kf.setImage(with: imageURL!, placeholder: placeholderImage)
+        imageView.contentMode = .scaleAspectFill
         
-        imageView.contentMode = UIViewContentMode.scaleAspectFill
         cell.backgroundView = imageView
         cell.contentView.translatesAutoresizingMaskIntoConstraints = false
         
